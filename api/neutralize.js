@@ -11,7 +11,7 @@ export default async function handler(req, res) {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer xai-ZEiiXr8X1wGMSXlAbwRRXLW62f0TwOw8ClkbVPmgqrTG4RPcevI4JXNJVYvUKn5jsYyA7HxxCgXIFIHo'
+            'Authorization': `Bearer ${process.env.XAI_API_KEY}`
           },
           body: JSON.stringify({
             messages: [
