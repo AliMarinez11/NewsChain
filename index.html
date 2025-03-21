@@ -44,7 +44,7 @@
   <script>
     async function loadNarratives() {
       try {
-        const response = await fetch('/Users/alimarinez/NewsChain/narratives.json');
+        const response = await fetch('/narratives.json');
         const data = await response.json();
         const container = document.getElementById('narratives');
         for (const [key, narrative] of Object.entries(data.narratives)) {
