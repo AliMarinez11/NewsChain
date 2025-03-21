@@ -1,35 +1,52 @@
-import { createXai } from '@ai-sdk/xai';
-import { generateText } from 'ai';
-
 export default async function handler(req, res) {
-  try {
-    // Create an xAI provider instance
-    const xai = createXai({
-      apiKey: process.env.XAI_API_KEY, // Defaults to XAI_API_KEY env variable
-    });
-
-    // Use the provider to create a model
-    const model = xai('grok');
-
-    const rawNarratives = req.body;
-    const neutralized = {};
-    for (const [key, articles] of Object.entries(rawNarratives)) {
-      const titles = articles.map(a => a.title).join(" ");
-      const { text: neutralSummary } = await generateText({
-        model,
-        prompt: `Summarize neutrally: ${titles}`,
-        maxTokens: 100
-      });
-
-      articles.forEach(article => {
-        article.sentiment = Math.random() * 2 - 1; // Placeholder
-      });
-
-      neutralized[key] = { neutral_summary: neutralSummary, articles };
+    try {
+      const rawNarratives = req.body;
+      const neutralized = {};
+  
+      for (const [key, articles] of Object.entries(rawNarratives)) {
+        const titles = articles.map(a => a.title).join(" ");
+        
+        // Make a direct API call to xAI's chat completions endpoint
+        const response = await fetch('https://api.x.ai/v1/chat/completions', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer xai-ZEiiXr8X1wGMSXlAbwRRXLW62f0TwOw8ClkbVPmgqrTG4RPcevI4JXNJVYvUKn5jsYyA7HxxCgXIFIHo'
+          },
+          body: JSON.stringify({
+            messages: [
+              {
+                role: 'system',
+                content: 'You are a helpful assistant that provides neutral summaries.'
+              },
+              {
+                role: 'user',
+                content: `Summarize neutrally: ${titles}`
+              }
+            ],
+            model: 'grok-2-latest',
+            stream: false,
+            temperature: 0,
+            max_tokens: 100
+          })
+        });
+  
+        const data = await response.json();
+        if (!response.ok) {
+          throw new Error(data.error?.message || 'Failed to call xAI API');
+        }
+  
+        const neutralSummary = data.choices[0].message.content;
+  
+        articles.forEach(article => {
+          article.sentiment = Math.random() * 2 - 1; // Placeholder
+        });
+  
+        neutralized[key] = { neutral_summary: neutralSummary, articles };
+      }
+  
+      res.json({ narratives: neutralized, timestamp: new Date().toISOString() });
+    } catch (error) {
+      res.status(500).json({ error: error.message, stack: error.stack });
     }
-
-    res.json({ narratives: neutralized, timestamp: new Date().toISOString() });
-  } catch (error) {
-    res.status(500).json({ error: error.message, stack: error.stack });
   }
-}
