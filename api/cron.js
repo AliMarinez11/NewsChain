@@ -1,4 +1,8 @@
 export default async function handler(req, res) {
+    // Log the Authorization header for debugging
+    console.log('Authorization Header:', req.headers['Authorization']);
+    console.log('Expected:', `Bearer ${process.env.CRON_SECRET}`);
+  
     // Verify the CRON_SECRET for security
     if (req.headers['Authorization'] !== `Bearer ${process.env.CRON_SECRET}`) {
       return res.status(401).end('Unauthorized');
