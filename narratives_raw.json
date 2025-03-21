@@ -1,23 +1,13 @@
 {
-    "other": [
+    "trump_education": [
         {
-            "title": "4 things to know about Trump\u2019s effort to dismantle the Department of Education",
-            "url": "https://www.cnn.com/2025/03/20/politics/dismantling-department-of-education-trump/index.html",
+            "title": "Lawmakers clash with constituents following more angry town halls",
+            "url": "https://www.cnn.com/2025/03/20/politics/angry-town-halls-lawmakers-clash/index.html",
             "source": "cnn"
         },
         {
-            "title": "Trump rescinds order that suspended security clearances at top law firm",
-            "url": "https://www.cnn.com/2025/03/20/politics/paul-weiss-trump-rescinds-order-suspended-security-clearances/index.html",
-            "source": "cnn"
-        },
-        {
-            "title": "Judge says Trump administration can\u2019t deport Georgetown University fellow",
-            "url": "https://www.cnn.com/2025/03/20/politics/badar-khan-suri-georgetown-university-fellow-detained-dhs/index.html",
-            "source": "cnn"
-        },
-        {
-            "title": "Alexandria Ocasio-Cortez says Democratic Party needs to fight harder while rallying with Bernie Sanders",
-            "url": "https://www.cnn.com/2025/03/20/politics/aoc-bernie-sanders-democratic-party/index.html",
+            "title": "Musk to visit Pentagon following an invitation from Secretary Hegseth",
+            "url": "https://www.cnn.com/2025/03/20/politics/elon-musk-visit-pentagon-hegseth-china/index.html",
             "source": "cnn"
         },
         {
@@ -26,8 +16,8 @@
             "source": "cnn"
         },
         {
-            "title": "Trump signs executive order to begin dismantling Education Department, raising questions for students and parents",
-            "url": "https://www.cnn.com/2025/03/20/politics/education-department-trump-executive-order/index.html",
+            "title": "Why Trump\u2019s greatest first-term strength may be his biggest second-term weakness",
+            "url": "https://www.cnn.com/2025/03/14/politics/trump-economic-poll-ratings-inflation/index.html",
             "source": "cnn"
         },
         {
@@ -41,111 +31,6 @@
             "source": "cnn"
         },
         {
-            "title": "Trump officials justify the threat of a recession \u2014 but they\u2019d feel the pain, too",
-            "url": "https://www.cnn.com/2025/03/20/politics/recession-fears-trump-tariffs-biden-obama-bush-what-matters/index.html",
-            "source": "cnn"
-        },
-        {
-            "title": "Trump\u2019s moves to hollow out government could be difficult to undo",
-            "url": "https://www.cnn.com/2025/03/20/politics/trump-musk-federal-government-reagan/index.html",
-            "source": "cnn"
-        },
-        {
-            "title": "How to decode a head-spinning few days of Ukraine war diplomacy",
-            "url": "https://www.cnn.com/2025/03/19/politics/ukraine-war-trump-putin-zelensky-russia-diplomacy/index.html",
-            "source": "cnn"
-        },
-        {
-            "title": "Tesla vandals are terrorists, according to President Trump",
-            "url": "https://www.cnn.com/2025/03/19/politics/tesla-attacks-trump-musk-domestic-terrorism-what-matters/index.html",
-            "source": "cnn"
-        },
-        {
-            "title": "What is a constitutional crisis and are we in one right now?",
-            "url": "https://www.cnn.com/2025/03/17/politics/constitutional-crisis-courts-trump-executive-power-what-matters/index.html",
-            "source": "cnn"
-        },
-        {
-            "title": "A fateful moment looms as Trump\u2019s team seeks to bypass the judiciary",
-            "url": "https://www.cnn.com/2025/03/18/politics/trump-deportations-judge-executive-power/index.html",
-            "source": "cnn"
-        },
-        {
-            "title": "In Ukraine and Gaza, Trump finds out that ending wars is tougher than it looks",
-            "url": "https://www.cnn.com/2025/03/19/politics/trump-peacemaker-ukraine-russia-gaza-israel/index.html",
-            "source": "cnn"
-        },
-        {
-            "title": "White House denies ignoring court order halting Venezuelan deportations",
-            "url": "https://www.cnn.com/2025/03/17/politics/trump-judge-court-order-venezuelan-deportations/index.html",
-            "source": "cnn"
-        },
-        {
-            "title": "Mark Carney and the backlash against backlash politics",
-            "url": "https://www.cnn.com/2025/03/15/americas/mark-carney-trump-canada-analysis-intl-latam/index.html",
-            "source": "cnn"
-        },
-        {
-            "title": "Rep. Aguilar on Democrats\u2019 \u2018limited\u2019 leverage in GOP Congress",
-            "url": "https://www.cnn.com/2025/03/20/politics/video/the-lead-pete-aguilar-congress-democrats-roundtable-town-hall-anger-voters-jake-tapper",
-            "source": "cnn"
-        },
-        {
-            "title": "Chuck Todd: This growing voter anger is \u2018real\u2019",
-            "url": "https://www.cnn.com/2025/03/20/politics/video/the-lead-chuck-todd-jonah-goldberg-town-hall-outrage-voters-congress-jake-tapper",
-            "source": "cnn"
-        },
-        {
-            "title": "Canadians in crosshairs of trade war call Trump\u2019s tariffs a \u2018bad dream\u2019",
-            "url": "https://www.cnn.com/2025/03/06/politics/canada-trump-tariffs-impact/index.html",
-            "source": "cnn"
-        },
-        {
-            "title": "How Colorado Trump voters feel about the president\u2019s tumultuous new term",
-            "url": "https://www.cnn.com/2025/02/24/politics/colorado-trump-voters-prices-immigration/index.html",
-            "source": "cnn"
-        },
-        {
-            "title": "Fact check: Trump\u2019s false claims on immigration, Biden, Ukraine in DOJ remarks",
-            "url": "https://www.cnn.com/2025/03/14/politics/fact-check-trump-immigration-biden-ukraine-doj/index.html",
-            "source": "cnn"
-        },
-        {
-            "title": "Fact check: Nine Trump false claims about Canada",
-            "url": "https://www.cnn.com/2025/03/12/politics/fact-check-trump-canada-claims/index.html",
-            "source": "cnn"
-        },
-        {
-            "title": "KFile: Gavin Newsom spent years fighting for progressive positions he now bashes on his new podcast",
-            "url": "https://www.cnn.com/2025/03/20/politics/kfile-gavin-newsom-podcast-policy-reversal-trans-sports-latinx/index.html",
-            "source": "cnn"
-        },
-        {
-            "title": "Deleted tweets show top State Department official spread false rumor about Rubio\u2019s sexuality, called him \u2018low IQ\u2019",
-            "url": "https://www.cnn.com/2025/03/10/politics/darren-beattie-marco-rubio-deleted-tweets-kfile/index.html",
-            "source": "cnn"
-        },
-        {
-            "title": "Americans think Trump\u2019s cuts will hurt (and help) the country. Here\u2019s how",
-            "url": "https://www.cnn.com/2025/03/15/politics/trump-government-cuts-musk-voters-what-matters/index.html",
-            "source": "cnn"
-        },
-        {
-            "title": "Why Trump\u2019s greatest first-term strength may be his biggest second-term weakness",
-            "url": "https://www.cnn.com/2025/03/14/politics/trump-economic-poll-ratings-inflation/index.html",
-            "source": "cnn"
-        },
-        {
-            "title": "Lawmakers clash with constituents following more angry town halls",
-            "url": "https://www.cnn.com/2025/03/20/politics/angry-town-halls-lawmakers-clash/index.html",
-            "source": "cnn"
-        },
-        {
-            "title": "Back on the road, Tim Walz tries to find his voice and fill \u2018the void\u2019",
-            "url": "https://www.cnn.com/2025/03/20/politics/tim-walz-democratic-party-future-town-hall-tour/index.html",
-            "source": "cnn"
-        },
-        {
             "title": "Judge declines to block DOGE takeover of US Institute of Peace while legal challenge plays out",
             "url": "https://www.cnn.com/2025/03/19/politics/us-institute-of-peace-sues-after-doge-takeover/index.html",
             "source": "cnn"
@@ -156,13 +41,13 @@
             "source": "cnn"
         },
         {
-            "title": "Massive purge of Pentagon websites includes content on Holocaust remembrance, sexual assault and suicide prevention",
-            "url": "https://www.cnn.com/2025/03/19/politics/pentagon-website-purge/index.html",
+            "title": "Zelensky agrees to pause attacks on energy in call with Trump, but questions remain about what Trump and Putin hammered out",
+            "url": "https://www.cnn.com/2025/03/19/politics/trump-zelensky-putin-phone-calls/index.html",
             "source": "cnn"
         },
         {
-            "title": "Michigan Democrat says she \u2018can\u2019t just be an activist\u2019 and calls on party to act",
-            "url": "https://www.cnn.com/2025/03/19/politics/slotkin-democrats-action-activist-aoc/index.html",
+            "title": "Massive purge of Pentagon websites includes content on Holocaust remembrance, sexual assault and suicide prevention",
+            "url": "https://www.cnn.com/2025/03/19/politics/pentagon-website-purge/index.html",
             "source": "cnn"
         },
         {
@@ -226,8 +111,8 @@
             "source": "cnn"
         },
         {
-            "title": "New Social Security anti-fraud rule will force more people to visit agency offices",
-            "url": "https://www.cnn.com/2025/03/18/politics/social-security-anti-fraud-requirements/index.html",
+            "title": "After call with Trump, Putin agrees to pause attacks on Ukraine\u2019s energy and infrastructure targets",
+            "url": "https://www.cnn.com/2025/03/18/politics/trump-putin-ceasefire-russia-ukraine-war/index.html",
             "source": "cnn"
         },
         {
@@ -238,6 +123,11 @@
         {
             "title": "Tracking Trump\u2019s criminal cases",
             "url": "https://www.cnn.com/interactive/2023/07/politics/trump-indictments-criminal-cases/",
+            "source": "cnn"
+        },
+        {
+            "title": "Anatomy of three Trump elections: How Americans shifted in 2024 vs. 2020 and 2016",
+            "url": "https://www.cnn.com/interactive/2024/politics/2020-2016-exit-polls-2024-dg/",
             "source": "cnn"
         },
         {
@@ -256,6 +146,11 @@
             "source": "cnn"
         },
         {
+            "title": "DOGE deputy, Treasury Secretary dish on crusade to pull the IRS out of its 'really big hole'",
+            "url": "https://www.fox.com/media/doge-deputy-treasury-secretary-dish-crusade-pull-irs-out-its-really-big-hole",
+            "source": "fox"
+        },
+        {
             "title": "Trump demands Supreme Court step in after federal judges block his agenda: 'These people are Lunatics'",
             "url": "https://www.fox.com/politics/trump-demands-supreme-court-step-after-federal-judges-block-his-agenda-these-people-lunatics",
             "source": "fox"
@@ -263,16 +158,6 @@
         {
             "title": "Secretary McMahon vows to make education 'better' for students so they won't be held 'prisoner' in schools",
             "url": "https://www.fox.com/media/secretary-mcmahon-vows-make-education-better-children-so-wont-held-prisoner",
-            "source": "fox"
-        },
-        {
-            "title": "JD Vance takes shot at Harris as he jokes that drinking led to her 'word salads'",
-            "url": "https://www.fox.com/politics/jd-vance-takes-shot-harris-he-jokes-drinking-led-her-word-salads",
-            "source": "fox"
-        },
-        {
-            "title": "Hegseth says Defense Dept eliminates hundreds of millions in 'wasteful' spending after DOGE findings",
-            "url": "https://www.fox.com/politics/hegseth-says-defense-dept-eliminates-hundreds-millions-wasteful-spending-doge-findings",
             "source": "fox"
         },
         {
@@ -296,13 +181,13 @@
             "source": "fox"
         },
         {
-            "title": "Judges v Trump: Here are the key court battles halting the White House agenda",
-            "url": "https://www.fox.com/politics/judges-v-trump-here-key-court-battles-halting-white-house-agenda",
+            "title": "DOGE deputy, Treasury Secretary dish on crusade to pull the IRS out of its 'really big hole'",
+            "url": "https://www.fox.com/media/doge-deputy-treasury-secretary-dish-crusade-pull-irs-out-its-really-big-hole",
             "source": "fox"
         },
         {
-            "title": "JD Vance takes shot at Harris as he jokes that drinking led to her 'word salads'",
-            "url": "https://www.fox.com/politics/jd-vance-takes-shot-harris-he-jokes-drinking-led-her-word-salads",
+            "title": "Judges v Trump: Here are the key court battles halting the White House agenda",
+            "url": "https://www.fox.com/politics/judges-v-trump-here-key-court-battles-halting-white-house-agenda",
             "source": "fox"
         },
         {
@@ -341,11 +226,6 @@
             "source": "fox"
         },
         {
-            "title": "Israel begins ground operation in Hamas stronghold of Rafah, expands activities in Gaza",
-            "url": "https://www.fox.com/world/israel-begins-ground-operation-hamas-stronghold-rafah-expands-activities-gaza",
-            "source": "fox"
-        },
-        {
             "title": "Barron Trump, celebrating 19th birthday, praised as 'smart guy' by his father",
             "url": "https://www.fox.com/politics/barron-trump-celebrating-19th-birthday-praised-smart-guy-his-father",
             "source": "fox"
@@ -358,16 +238,6 @@
         {
             "title": "Trump rescinds Biden-era policy declaring DEI an 'integral' part of scientific process",
             "url": "https://www.fox.com/politics/trump-rescinds-biden-era-scientific-integrity-policy-asserting-dei-integral-part-scientific-process",
-            "source": "fox"
-        },
-        {
-            "title": "10 places where Tesla vehicles, dealerships were attacked this year",
-            "url": "https://www.fox.com/us/10-places-where-tesla-vehicles-dealerships-were-attacked-year",
-            "source": "fox"
-        },
-        {
-            "title": "SCOOP: Bill preventing activist judges from blocking Trump's agenda backed by White House",
-            "url": "https://www.fox.com/politics/scoop-bill-preventing-activist-judges-from-blocking-trumps-agenda-backed-white-house",
             "source": "fox"
         },
         {
@@ -386,23 +256,18 @@
             "source": "fox"
         },
         {
+            "title": "'All Star' Panel: The challenges of Trump's Education Department EO",
+            "url": "https://www.foxnews.com/video/6370303290112",
+            "source": "fox"
+        },
+        {
             "title": "Trump's approval 'as high as it's ever been' heading into his 2nd term, Bret Baier reports",
             "url": "https://www.foxnews.com/video/6370298656112",
             "source": "fox"
         },
         {
-            "title": "Coming up on Friday, March 21 edition of 'Special Report'",
-            "url": "https://www.foxnews.com/video/6370300318112",
-            "source": "fox"
-        },
-        {
             "title": "Trump approval ratings at record high, new Fox polls show",
             "url": "https://www.foxnews.com/video/6370298252112",
-            "source": "fox"
-        },
-        {
-            "title": "Academic targeted over Palestinian support, lawyers say",
-            "url": "https://www.foxnews.com/video/6370298786112",
             "source": "fox"
         },
         {
@@ -416,23 +281,166 @@
             "source": "fox"
         }
     ],
-    "trump_zelenskyy_putin": [
+    "trump_says": [
         {
-            "title": "Zelensky agrees to pause attacks on energy in call with Trump, but questions remain about what Trump and Putin hammered out",
-            "url": "https://www.cnn.com/2025/03/19/politics/trump-zelensky-putin-phone-calls/index.html",
+            "title": "Judge says Trump administration can\u2019t deport Georgetown University fellow",
+            "url": "https://www.cnn.com/2025/03/20/politics/badar-khan-suri-georgetown-university-fellow-detained-dhs/index.html",
             "source": "cnn"
         },
         {
-            "title": "After call with Trump, Putin agrees to pause attacks on Ukraine\u2019s energy and infrastructure targets",
-            "url": "https://www.cnn.com/2025/03/18/politics/trump-putin-ceasefire-russia-ukraine-war/index.html",
+            "title": "4 things to know about Trump\u2019s effort to dismantle the Department of Education",
+            "url": "https://www.cnn.com/2025/03/20/politics/dismantling-department-of-education-trump/index.html",
+            "source": "cnn"
+        },
+        {
+            "title": "Trump rescinds order that suspended security clearances at top law firm",
+            "url": "https://www.cnn.com/2025/03/20/politics/paul-weiss-trump-rescinds-order-suspended-security-clearances/index.html",
+            "source": "cnn"
+        },
+        {
+            "title": "Alexandria Ocasio-Cortez says Democratic Party needs to fight harder while rallying with Bernie Sanders",
+            "url": "https://www.cnn.com/2025/03/20/politics/aoc-bernie-sanders-democratic-party/index.html",
+            "source": "cnn"
+        },
+        {
+            "title": "Trump signs executive order to begin dismantling Education Department, raising questions for students and parents",
+            "url": "https://www.cnn.com/2025/03/20/politics/education-department-trump-executive-order/index.html",
+            "source": "cnn"
+        },
+        {
+            "title": "Trump delivers on a generational conservative goal, but it could be risky for Republicans as well as students",
+            "url": "https://www.cnn.com/2025/03/21/politics/education-department-trump-executive-order-universities/index.html",
+            "source": "cnn"
+        },
+        {
+            "title": "Trump officials justify the threat of a recession \u2014 but they\u2019d feel the pain, too",
+            "url": "https://www.cnn.com/2025/03/20/politics/recession-fears-trump-tariffs-biden-obama-bush-what-matters/index.html",
+            "source": "cnn"
+        },
+        {
+            "title": "Trump\u2019s moves to hollow out government could be difficult to undo",
+            "url": "https://www.cnn.com/2025/03/20/politics/trump-musk-federal-government-reagan/index.html",
+            "source": "cnn"
+        },
+        {
+            "title": "Tesla vandals are terrorists, according to President Trump",
+            "url": "https://www.cnn.com/2025/03/19/politics/tesla-attacks-trump-musk-domestic-terrorism-what-matters/index.html",
+            "source": "cnn"
+        },
+        {
+            "title": "A fateful moment looms as Trump\u2019s team seeks to bypass the judiciary",
+            "url": "https://www.cnn.com/2025/03/18/politics/trump-deportations-judge-executive-power/index.html",
+            "source": "cnn"
+        },
+        {
+            "title": "In Ukraine and Gaza, Trump finds out that ending wars is tougher than it looks",
+            "url": "https://www.cnn.com/2025/03/19/politics/trump-peacemaker-ukraine-russia-gaza-israel/index.html",
+            "source": "cnn"
+        },
+        {
+            "title": "White House denies ignoring court order halting Venezuelan deportations",
+            "url": "https://www.cnn.com/2025/03/17/politics/trump-judge-court-order-venezuelan-deportations/index.html",
+            "source": "cnn"
+        },
+        {
+            "title": "Mayoral candidate shares shocking voicemails after confronting Trump\u2019s border czar",
+            "url": "https://www.cnn.com/2025/03/20/politics/video/zohran-mamdani-racist-voicemails-digvid",
+            "source": "cnn"
+        },
+        {
+            "title": "Slotkin has \u2018white flag energy\u2019 in Dem civil war, says Jamaal Bowman",
+            "url": "https://www.cnn.com/2025/03/20/politics/video/slotkin-has-white-flag-energy-in-dem-civil-war-says-jamaal-bowman",
+            "source": "cnn"
+        },
+        {
+            "title": "Canadians in crosshairs of trade war call Trump\u2019s tariffs a \u2018bad dream\u2019",
+            "url": "https://www.cnn.com/2025/03/06/politics/canada-trump-tariffs-impact/index.html",
+            "source": "cnn"
+        },
+        {
+            "title": "How Colorado Trump voters feel about the president\u2019s tumultuous new term",
+            "url": "https://www.cnn.com/2025/02/24/politics/colorado-trump-voters-prices-immigration/index.html",
+            "source": "cnn"
+        },
+        {
+            "title": "Fact check: Trump\u2019s false claims on immigration, Biden, Ukraine in DOJ remarks",
+            "url": "https://www.cnn.com/2025/03/14/politics/fact-check-trump-immigration-biden-ukraine-doj/index.html",
+            "source": "cnn"
+        },
+        {
+            "title": "Fact check: Nine Trump false claims about Canada",
+            "url": "https://www.cnn.com/2025/03/12/politics/fact-check-trump-canada-claims/index.html",
+            "source": "cnn"
+        },
+        {
+            "title": "Deleted tweets show top State Department official spread false rumor about Rubio\u2019s sexuality, called him \u2018low IQ\u2019",
+            "url": "https://www.cnn.com/2025/03/10/politics/darren-beattie-marco-rubio-deleted-tweets-kfile/index.html",
+            "source": "cnn"
+        },
+        {
+            "title": "Americans think Trump\u2019s cuts will hurt (and help) the country. Here\u2019s how",
+            "url": "https://www.cnn.com/2025/03/15/politics/trump-government-cuts-musk-voters-what-matters/index.html",
+            "source": "cnn"
+        },
+        {
+            "title": "Michigan Democrat says she \u2018can\u2019t just be an activist\u2019 and calls on party to act",
+            "url": "https://www.cnn.com/2025/03/19/politics/slotkin-democrats-action-activist-aoc/index.html",
+            "source": "cnn"
+        },
+        {
+            "title": "JD Vance takes shot at Harris as he jokes that drinking led to her 'word salads'",
+            "url": "https://www.fox.com/politics/jd-vance-takes-shot-harris-he-jokes-drinking-led-her-word-salads",
+            "source": "fox"
+        },
+        {
+            "title": "JD Vance takes shot at Harris as he jokes that drinking led to her 'word salads'",
+            "url": "https://www.fox.com/politics/jd-vance-takes-shot-harris-he-jokes-drinking-led-her-word-salads",
+            "source": "fox"
+        },
+        {
+            "title": "Israel begins ground operation in Hamas stronghold of Rafah, expands activities in Gaza",
+            "url": "https://www.fox.com/world/israel-begins-ground-operation-hamas-stronghold-rafah-expands-activities-gaza",
+            "source": "fox"
+        },
+        {
+            "title": "10 places where Tesla vehicles, dealerships were attacked this year",
+            "url": "https://www.fox.com/us/10-places-where-tesla-vehicles-dealerships-were-attacked-year",
+            "source": "fox"
+        }
+    ],
+    "decode_head": [
+        {
+            "title": "How to decode a head-spinning few days of Ukraine war diplomacy",
+            "url": "https://www.cnn.com/2025/03/19/politics/ukraine-war-trump-putin-zelensky-russia-diplomacy/index.html",
             "source": "cnn"
         }
     ],
-    "election": [
+    "what_constitutional": [
         {
-            "title": "Anatomy of three Trump elections: How Americans shifted in 2024 vs. 2020 and 2016",
-            "url": "https://www.cnn.com/interactive/2024/politics/2020-2016-exit-polls-2024-dg/",
+            "title": "What is a constitutional crisis and are we in one right now?",
+            "url": "https://www.cnn.com/2025/03/17/politics/constitutional-crisis-courts-trump-executive-power-what-matters/index.html",
             "source": "cnn"
+        }
+    ],
+    "kfile_gavin": [
+        {
+            "title": "KFile: Gavin Newsom spent years fighting for progressive positions he now bashes on his new podcast",
+            "url": "https://www.cnn.com/2025/03/20/politics/kfile-gavin-newsom-podcast-policy-reversal-trans-sports-latinx/index.html",
+            "source": "cnn"
+        }
+    ],
+    "back_road": [
+        {
+            "title": "Back on the road, Tim Walz tries to find his voice and fill \u2018the void\u2019",
+            "url": "https://www.cnn.com/2025/03/20/politics/tim-walz-democratic-party-future-town-hall-tour/index.html",
+            "source": "cnn"
+        }
+    ],
+    "coming_friday": [
+        {
+            "title": "Coming up on Friday, March 21 edition of 'Special Report'",
+            "url": "https://www.foxnews.com/video/6370300318112",
+            "source": "fox"
         }
     ]
 }
