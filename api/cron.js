@@ -1,6 +1,6 @@
 export default async function handler(req, res) {
     // Verify the CRON_SECRET for security
-    if (req.headers.get('Authorization') !== `Bearer ${process.env.CRON_SECRET}`) {
+    if (req.headers['Authorization'] !== `Bearer ${process.env.CRON_SECRET}`) {
       return res.status(401).end('Unauthorized');
     }
   
