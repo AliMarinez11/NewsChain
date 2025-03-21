@@ -60,10 +60,22 @@ def main():
     raw_narratives = categorize_articles(all_articles)
     
     # Save raw data
-    raw_path = '/Users/alimarinez/NewsChain/narratives_raw.json'
+    raw_path = '/Users/alimarinez/TruthChainReal/narratives_raw.json'
     with open(raw_path, 'w') as f:
         json.dump(raw_narratives, f, indent=4)
     print(f"Raw narratives saved to {raw_path}")
+    
+    # Call Vercel API with Grok
+    vercel_url = "https://news-chain.vercel.app/api/neutralize"
+    response = requests.post(vercel_url, json=raw_narratives)
+    if response.status_code == 200:
+        neutralized_narratives = response.json()
+        output_path = '/Users/alimarinez/TruthChainReal/narratives.json'
+        with open(output_path, 'w') as f:
+            json.dump(neutralized_narratives, f, indent=4)
+        print(f"Neutralized narratives saved to {output_path}")
+    else:
+        print(f"Vercel API failed: {response.status_code} - {response.text}")
 
 if __name__ == "__main__":
     main()
