@@ -1,0 +1,536 @@
+{
+    "narratives": {
+        "other": {
+            "neutral_summary": "1. **Effort to Dismantle the Department of Education**: President Trump has initiated actions to dismantle the Department of Education, signing an executive order to begin this process. This move has raised questions among students and parents about the future of education policy. Additionally, a House Republican is moving to codify this order into law, and a GOP senator is collaborating with Trump on a bill to abolish the department. The Fox News Politics Newsletter has provided a primer on this topic, and Secretary McMahon has",
+            "articles": [
+                {
+                    "title": "4 things to know about Trump\u2019s effort to dismantle the Department of Education",
+                    "url": "https://www.cnn.com/2025/03/20/politics/dismantling-department-of-education-trump/index.html",
+                    "source": "cnn",
+                    "sentiment": 0.6364588011112273
+                },
+                {
+                    "title": "Trump rescinds order that suspended security clearances at top law firm",
+                    "url": "https://www.cnn.com/2025/03/20/politics/paul-weiss-trump-rescinds-order-suspended-security-clearances/index.html",
+                    "source": "cnn",
+                    "sentiment": -0.2985511801996483
+                },
+                {
+                    "title": "Judge says Trump administration can\u2019t deport Georgetown University fellow",
+                    "url": "https://www.cnn.com/2025/03/20/politics/badar-khan-suri-georgetown-university-fellow-detained-dhs/index.html",
+                    "source": "cnn",
+                    "sentiment": -0.6895814696112077
+                },
+                {
+                    "title": "Alexandria Ocasio-Cortez says Democratic Party needs to fight harder while rallying with Bernie Sanders",
+                    "url": "https://www.cnn.com/2025/03/20/politics/aoc-bernie-sanders-democratic-party/index.html",
+                    "source": "cnn",
+                    "sentiment": -0.004237412446837396
+                },
+                {
+                    "title": "Military was instructed to search keywords including \u2018first\u2019 and \u2018history\u2019 during rushed purge of Pentagon websites",
+                    "url": "https://www.cnn.com/2025/03/20/politics/pentagon-search-keywords-website-purge/index.html",
+                    "source": "cnn",
+                    "sentiment": -0.605627675817062
+                },
+                {
+                    "title": "Trump signs executive order to begin dismantling Education Department, raising questions for students and parents",
+                    "url": "https://www.cnn.com/2025/03/20/politics/education-department-trump-executive-order/index.html",
+                    "source": "cnn",
+                    "sentiment": -0.8416425350196035
+                },
+                {
+                    "title": "DOGE blocked from accessing sensitive Social Security data, after judge raises concerns of a \u2018fishing expedition\u2019",
+                    "url": "https://www.cnn.com/2025/03/20/politics/social-security-doge-fishing-expedition/index.html",
+                    "source": "cnn",
+                    "sentiment": -0.2747374820366768
+                },
+                {
+                    "title": "Trump administration unfazed by court losses and sets sights on Supreme Court",
+                    "url": "https://www.cnn.com/2025/03/20/politics/trump-administration-unfazed-by-court-losses-supreme-court/index.html",
+                    "source": "cnn",
+                    "sentiment": 0.1464485769924928
+                },
+                {
+                    "title": "Trump officials justify the threat of a recession \u2014 but they\u2019d feel the pain, too",
+                    "url": "https://www.cnn.com/2025/03/20/politics/recession-fears-trump-tariffs-biden-obama-bush-what-matters/index.html",
+                    "source": "cnn",
+                    "sentiment": 0.6796629657797038
+                },
+                {
+                    "title": "Trump\u2019s moves to hollow out government could be difficult to undo",
+                    "url": "https://www.cnn.com/2025/03/20/politics/trump-musk-federal-government-reagan/index.html",
+                    "source": "cnn",
+                    "sentiment": -0.39899467614126394
+                },
+                {
+                    "title": "How to decode a head-spinning few days of Ukraine war diplomacy",
+                    "url": "https://www.cnn.com/2025/03/19/politics/ukraine-war-trump-putin-zelensky-russia-diplomacy/index.html",
+                    "source": "cnn",
+                    "sentiment": -0.35151224483199917
+                },
+                {
+                    "title": "Tesla vandals are terrorists, according to President Trump",
+                    "url": "https://www.cnn.com/2025/03/19/politics/tesla-attacks-trump-musk-domestic-terrorism-what-matters/index.html",
+                    "source": "cnn",
+                    "sentiment": 0.6574136724601365
+                },
+                {
+                    "title": "What is a constitutional crisis and are we in one right now?",
+                    "url": "https://www.cnn.com/2025/03/17/politics/constitutional-crisis-courts-trump-executive-power-what-matters/index.html",
+                    "source": "cnn",
+                    "sentiment": 0.09361959701524425
+                },
+                {
+                    "title": "A fateful moment looms as Trump\u2019s team seeks to bypass the judiciary",
+                    "url": "https://www.cnn.com/2025/03/18/politics/trump-deportations-judge-executive-power/index.html",
+                    "source": "cnn",
+                    "sentiment": 0.4387774243530136
+                },
+                {
+                    "title": "In Ukraine and Gaza, Trump finds out that ending wars is tougher than it looks",
+                    "url": "https://www.cnn.com/2025/03/19/politics/trump-peacemaker-ukraine-russia-gaza-israel/index.html",
+                    "source": "cnn",
+                    "sentiment": 0.3814951209594293
+                },
+                {
+                    "title": "White House denies ignoring court order halting Venezuelan deportations",
+                    "url": "https://www.cnn.com/2025/03/17/politics/trump-judge-court-order-venezuelan-deportations/index.html",
+                    "source": "cnn",
+                    "sentiment": -0.6031050140136514
+                },
+                {
+                    "title": "Mark Carney and the backlash against backlash politics",
+                    "url": "https://www.cnn.com/2025/03/15/americas/mark-carney-trump-canada-analysis-intl-latam/index.html",
+                    "source": "cnn",
+                    "sentiment": -0.4550855684569517
+                },
+                {
+                    "title": "Rep. Aguilar on Democrats\u2019 \u2018limited\u2019 leverage in GOP Congress",
+                    "url": "https://www.cnn.com/2025/03/20/politics/video/the-lead-pete-aguilar-congress-democrats-roundtable-town-hall-anger-voters-jake-tapper",
+                    "source": "cnn",
+                    "sentiment": 0.37217684911575866
+                },
+                {
+                    "title": "Chuck Todd: This growing voter anger is \u2018real\u2019",
+                    "url": "https://www.cnn.com/2025/03/20/politics/video/the-lead-chuck-todd-jonah-goldberg-town-hall-outrage-voters-congress-jake-tapper",
+                    "source": "cnn",
+                    "sentiment": 0.7435133952812327
+                },
+                {
+                    "title": "Canadians in crosshairs of trade war call Trump\u2019s tariffs a \u2018bad dream\u2019",
+                    "url": "https://www.cnn.com/2025/03/06/politics/canada-trump-tariffs-impact/index.html",
+                    "source": "cnn",
+                    "sentiment": 0.5646585755113853
+                },
+                {
+                    "title": "How Colorado Trump voters feel about the president\u2019s tumultuous new term",
+                    "url": "https://www.cnn.com/2025/02/24/politics/colorado-trump-voters-prices-immigration/index.html",
+                    "source": "cnn",
+                    "sentiment": 0.7178503987935159
+                },
+                {
+                    "title": "Fact check: Trump\u2019s false claims on immigration, Biden, Ukraine in DOJ remarks",
+                    "url": "https://www.cnn.com/2025/03/14/politics/fact-check-trump-immigration-biden-ukraine-doj/index.html",
+                    "source": "cnn",
+                    "sentiment": 0.3739604321084533
+                },
+                {
+                    "title": "Fact check: Nine Trump false claims about Canada",
+                    "url": "https://www.cnn.com/2025/03/12/politics/fact-check-trump-canada-claims/index.html",
+                    "source": "cnn",
+                    "sentiment": 0.8001412323950481
+                },
+                {
+                    "title": "KFile: Gavin Newsom spent years fighting for progressive positions he now bashes on his new podcast",
+                    "url": "https://www.cnn.com/2025/03/20/politics/kfile-gavin-newsom-podcast-policy-reversal-trans-sports-latinx/index.html",
+                    "source": "cnn",
+                    "sentiment": -0.1046356603710481
+                },
+                {
+                    "title": "Deleted tweets show top State Department official spread false rumor about Rubio\u2019s sexuality, called him \u2018low IQ\u2019",
+                    "url": "https://www.cnn.com/2025/03/10/politics/darren-beattie-marco-rubio-deleted-tweets-kfile/index.html",
+                    "source": "cnn",
+                    "sentiment": 0.2417204473193113
+                },
+                {
+                    "title": "Americans think Trump\u2019s cuts will hurt (and help) the country. Here\u2019s how",
+                    "url": "https://www.cnn.com/2025/03/15/politics/trump-government-cuts-musk-voters-what-matters/index.html",
+                    "source": "cnn",
+                    "sentiment": -0.9677446109290937
+                },
+                {
+                    "title": "Why Trump\u2019s greatest first-term strength may be his biggest second-term weakness",
+                    "url": "https://www.cnn.com/2025/03/14/politics/trump-economic-poll-ratings-inflation/index.html",
+                    "source": "cnn",
+                    "sentiment": -0.7228105723224894
+                },
+                {
+                    "title": "Lawmakers clash with constituents following more angry town halls",
+                    "url": "https://www.cnn.com/2025/03/20/politics/angry-town-halls-lawmakers-clash/index.html",
+                    "source": "cnn",
+                    "sentiment": -0.3837954015258189
+                },
+                {
+                    "title": "Back on the road, Tim Walz tries to find his voice and fill \u2018the void\u2019",
+                    "url": "https://www.cnn.com/2025/03/20/politics/tim-walz-democratic-party-future-town-hall-tour/index.html",
+                    "source": "cnn",
+                    "sentiment": -0.31120176095454566
+                },
+                {
+                    "title": "Judge declines to block DOGE takeover of US Institute of Peace while legal challenge plays out",
+                    "url": "https://www.cnn.com/2025/03/19/politics/us-institute-of-peace-sues-after-doge-takeover/index.html",
+                    "source": "cnn",
+                    "sentiment": 0.271978546070311
+                },
+                {
+                    "title": "Trump to sign order Thursday to begin dismantling of Education Department",
+                    "url": "https://www.cnn.com/2025/03/19/politics/trump-department-of-education/index.html",
+                    "source": "cnn",
+                    "sentiment": 0.5948534522865176
+                },
+                {
+                    "title": "Massive purge of Pentagon websites includes content on Holocaust remembrance, sexual assault and suicide prevention",
+                    "url": "https://www.cnn.com/2025/03/19/politics/pentagon-website-purge/index.html",
+                    "source": "cnn",
+                    "sentiment": -0.8702110066924051
+                },
+                {
+                    "title": "Michigan Democrat says she \u2018can\u2019t just be an activist\u2019 and calls on party to act",
+                    "url": "https://www.cnn.com/2025/03/19/politics/slotkin-democrats-action-activist-aoc/index.html",
+                    "source": "cnn",
+                    "sentiment": -0.8615215299614176
+                },
+                {
+                    "title": "John Roberts has enabled Trump. Now he hopes to restrain him",
+                    "url": "https://www.cnn.com/2025/03/19/politics/roberts-trump-supreme-court-judges-analysis/index.html",
+                    "source": "cnn",
+                    "sentiment": 0.14827122155032857
+                },
+                {
+                    "title": "Trump administration says deported migrants are gang members, but won\u2019t name them or provide evidence",
+                    "url": "https://www.cnn.com/2025/03/19/politics/deported-migrants-evidence-trump/index.html",
+                    "source": "cnn",
+                    "sentiment": -0.548568632291027
+                },
+                {
+                    "title": "Trump gives Iran two-month deadline to reach new nuclear deal",
+                    "url": "https://www.cnn.com/2025/03/19/politics/trump-gives-iran-deadline-nuclear-deal/index.html",
+                    "source": "cnn",
+                    "sentiment": 0.1451528417414134
+                },
+                {
+                    "title": "Researchers have lost access to evidence of alleged Russian war crimes following Trump admin funding cut",
+                    "url": "https://www.cnn.com/2025/03/19/politics/researchers-lose-access-evidence-alleged-russian-war-crimes/index.html",
+                    "source": "cnn",
+                    "sentiment": -0.5615943490951429
+                },
+                {
+                    "title": "Pentagon weighs major cuts to top of US military",
+                    "url": "https://www.cnn.com/2025/03/19/politics/pentagon-cuts-top-military/index.html",
+                    "source": "cnn",
+                    "sentiment": 0.07281950475408472
+                },
+                {
+                    "title": "Tracking Trump\u2019s overhaul of the federal workforce",
+                    "url": "https://www.cnn.com/politics/tracking-federal-workforce-firings-dg/index.html",
+                    "source": "cnn",
+                    "sentiment": 0.13754370886038636
+                },
+                {
+                    "title": "Retired Justice Stephen Breyer defends federal judges under attack from White House in CNN interview",
+                    "url": "https://www.cnn.com/2025/03/19/politics/stephen-breyer-roberts-trump-judges/index.html",
+                    "source": "cnn",
+                    "sentiment": 0.006875179855049929
+                },
+                {
+                    "title": "Tracking Trump\u2019s executive actions",
+                    "url": "https://www.cnn.com/politics/tracking-trump-executive-orders-actions-dg/index.html",
+                    "source": "cnn",
+                    "sentiment": 0.01151026786605458
+                },
+                {
+                    "title": "Trump and allies celebrated court orders against Biden they now claim are \u2018tyrannical\u2019",
+                    "url": "https://www.cnn.com/2025/02/18/politics/trump-biden-court-orders/index.html",
+                    "source": "cnn",
+                    "sentiment": 0.18399634033749823
+                },
+                {
+                    "title": "Trump administration releases new JFK assassination records",
+                    "url": "https://www.cnn.com/2025/03/18/politics/jfk-assassination-documents-trump/index.html",
+                    "source": "cnn",
+                    "sentiment": -0.28619925895413045
+                },
+                {
+                    "title": "Insulting, exhausting, traumatic: the death benefits battle between the VA and families of vets who die by suicide",
+                    "url": "https://www.cnn.com/2025/03/19/politics/veteran-suicides-va-benefits-invs/index.html",
+                    "source": "cnn",
+                    "sentiment": -0.6228601964299942
+                },
+                {
+                    "title": "\u2018A feeling of despair:\u2019 Democratic donors grapple with messaging, midterm map and an emboldened Trump",
+                    "url": "https://www.cnn.com/2025/03/19/politics/democratic-donors-grapple-with-messaging-midterms-trump/index.html",
+                    "source": "cnn",
+                    "sentiment": -0.4129988847084771
+                },
+                {
+                    "title": "New Social Security anti-fraud rule will force more people to visit agency offices",
+                    "url": "https://www.cnn.com/2025/03/18/politics/social-security-anti-fraud-requirements/index.html",
+                    "source": "cnn",
+                    "sentiment": 0.30759045130943186
+                },
+                {
+                    "title": "Here\u2019s what Trump has promised to do in a second term",
+                    "url": "https://cnn.it/49SplEC",
+                    "source": "cnn",
+                    "sentiment": 0.001676421886673829
+                },
+                {
+                    "title": "Tracking Trump\u2019s criminal cases",
+                    "url": "https://www.cnn.com/interactive/2023/07/politics/trump-indictments-criminal-cases/",
+                    "source": "cnn",
+                    "sentiment": -0.05979982093560521
+                },
+                {
+                    "title": "In pictures: President Joe Biden",
+                    "url": "https://www.cnn.com/2021/01/08/politics/gallery/joe-biden/index.html",
+                    "source": "cnn",
+                    "sentiment": -0.5604036448845338
+                },
+                {
+                    "title": "In pictures: President-elect Donald Trump",
+                    "url": "https://www.cnn.com/2021/01/08/politics/gallery/donald-trump/index.html",
+                    "source": "cnn",
+                    "sentiment": 0.6213668729909632
+                },
+                {
+                    "title": "In pictures: Remembering former President Jimmy Carter",
+                    "url": "https://www.cnn.com/2025/01/04/politics/gallery/remembering-president-jimmy-carter/index.html",
+                    "source": "cnn",
+                    "sentiment": 0.5342088226927495
+                },
+                {
+                    "title": "Trump demands Supreme Court step in after federal judges block his agenda: 'These people are Lunatics'",
+                    "url": "https://www.fox.com/politics/trump-demands-supreme-court-step-after-federal-judges-block-his-agenda-these-people-lunatics",
+                    "source": "fox",
+                    "sentiment": -0.5595504757633756
+                },
+                {
+                    "title": "Secretary McMahon vows to make education 'better' for students so they won't be held 'prisoner' in schools",
+                    "url": "https://www.fox.com/media/secretary-mcmahon-vows-make-education-better-children-so-wont-held-prisoner",
+                    "source": "fox",
+                    "sentiment": 0.3622077278450697
+                },
+                {
+                    "title": "JD Vance takes shot at Harris as he jokes that drinking led to her 'word salads'",
+                    "url": "https://www.fox.com/politics/jd-vance-takes-shot-harris-he-jokes-drinking-led-her-word-salads",
+                    "source": "fox",
+                    "sentiment": 0.46226529506290115
+                },
+                {
+                    "title": "Hegseth says Defense Dept eliminates hundreds of millions in 'wasteful' spending after DOGE findings",
+                    "url": "https://www.fox.com/politics/hegseth-says-defense-dept-eliminates-hundreds-millions-wasteful-spending-doge-findings",
+                    "source": "fox",
+                    "sentiment": 0.9413895430340302
+                },
+                {
+                    "title": "GOP senator says he's working with Trump on bill to abolish Education Department",
+                    "url": "https://www.fox.com/politics/gop-senator-says-hes-working-trump-bill-abolish-education-department",
+                    "source": "fox",
+                    "sentiment": 0.9001902792870089
+                },
+                {
+                    "title": "SCOOP: House Republican moves to codify Trump order to dismantle Department of Education",
+                    "url": "https://www.fox.com/politics/scoop-house-republican-moves-codify-trump-order-dismantle-department-education",
+                    "source": "fox",
+                    "sentiment": 0.34602872193753464
+                },
+                {
+                    "title": "Trans activist accused of witnessing sexual misconduct of minors leads chaplain prayer in Maine legislature",
+                    "url": "https://www.fox.com/politics/trans-activist-accused-witnessing-sexual-misconduct-minors-leads-chaplain-prayer-maine-legislature",
+                    "source": "fox",
+                    "sentiment": -0.508404163994904
+                },
+                {
+                    "title": "House GOP leaders privately wary of push to impeach federal judges blocking Trump agenda",
+                    "url": "https://www.fox.com/politics/house-gop-leaders-privately-wary-push-impeach-federal-judges-blocking-trump-agenda",
+                    "source": "fox",
+                    "sentiment": 0.06425049400108485
+                },
+                {
+                    "title": "Judges v Trump: Here are the key court battles halting the White House agenda",
+                    "url": "https://www.fox.com/politics/judges-v-trump-here-key-court-battles-halting-white-house-agenda",
+                    "source": "fox",
+                    "sentiment": 0.49415708480617093
+                },
+                {
+                    "title": "JD Vance takes shot at Harris as he jokes that drinking led to her 'word salads'",
+                    "url": "https://www.fox.com/politics/jd-vance-takes-shot-harris-he-jokes-drinking-led-her-word-salads",
+                    "source": "fox",
+                    "sentiment": -0.4046779914849701
+                },
+                {
+                    "title": "Hegseth says Defense Dept eliminates hundreds of millions in 'wasteful' spending after DOGE findings",
+                    "url": "https://www.fox.com/politics/hegseth-says-defense-dept-eliminates-hundreds-millions-wasteful-spending-doge-findings",
+                    "source": "fox",
+                    "sentiment": 0.8588729189832156
+                },
+                {
+                    "title": "Fox News Poll: Voters are split on Trump policies",
+                    "url": "https://www.fox.com/politics/fox-news-poll-voters-are-split-on-trump-policies",
+                    "source": "fox",
+                    "sentiment": 0.33204961881261896
+                },
+                {
+                    "title": "Fox News Poll: Approval of Zelenskyy down 20 points since start of war in Ukraine",
+                    "url": "https://www.fox.com/politics/fox-news-poll-approval-zelenskyy-down-20-points-since-start-war-ukraine",
+                    "source": "fox",
+                    "sentiment": -0.3187959041732773
+                },
+                {
+                    "title": "'Woefully insufficient': US judge reams Trump admin for days-late deportation info",
+                    "url": "https://www.fox.com/politics/woefully-insufficient-us-judge-reams-trump-admin-days-late-deportation-info",
+                    "source": "fox",
+                    "sentiment": -0.9894297151657412
+                },
+                {
+                    "title": "African war-torn nation invokes Trump \u2018golden age' for minerals deal in exchange for booting violent rebels",
+                    "url": "https://www.fox.com/politics/african-war-torn-nation-invokes-trump-golden-age-minerals-deal-exchange-booting-violent-rebels",
+                    "source": "fox",
+                    "sentiment": -0.6386879753964068
+                },
+                {
+                    "title": "House GOP leaders privately wary of push to impeach federal judges blocking Trump agenda",
+                    "url": "https://www.fox.com/politics/house-gop-leaders-privately-wary-push-impeach-federal-judges-blocking-trump-agenda",
+                    "source": "fox",
+                    "sentiment": -0.0466376939913844
+                },
+                {
+                    "title": "Biden's former spokesman slams Trump and GOP for 'colluding to impeach' judges",
+                    "url": "https://www.fox.com/politics/bidens-former-spokesman-slams-trump-gop-colluding-impeach-judges",
+                    "source": "fox",
+                    "sentiment": -0.9588715271269312
+                },
+                {
+                    "title": "Israel begins ground operation in Hamas stronghold of Rafah, expands activities in Gaza",
+                    "url": "https://www.fox.com/world/israel-begins-ground-operation-hamas-stronghold-rafah-expands-activities-gaza",
+                    "source": "fox",
+                    "sentiment": 0.19059059687808677
+                },
+                {
+                    "title": "Barron Trump, celebrating 19th birthday, praised as 'smart guy' by his father",
+                    "url": "https://www.fox.com/politics/barron-trump-celebrating-19th-birthday-praised-smart-guy-his-father",
+                    "source": "fox",
+                    "sentiment": -0.2759686098007941
+                },
+                {
+                    "title": "RFK Jr. details first baby formula review in decades amid concerns over contaminants, supply chain",
+                    "url": "https://www.fox.com/media/rfk-jr-details-first-baby-formula-review-decades-amid-concerns-over-contaminants-supply-chain",
+                    "source": "fox",
+                    "sentiment": 0.8865049385379722
+                },
+                {
+                    "title": "Trump rescinds Biden-era policy declaring DEI an 'integral' part of scientific process",
+                    "url": "https://www.fox.com/politics/trump-rescinds-biden-era-scientific-integrity-policy-asserting-dei-integral-part-scientific-process",
+                    "source": "fox",
+                    "sentiment": -0.9022036480557678
+                },
+                {
+                    "title": "10 places where Tesla vehicles, dealerships were attacked this year",
+                    "url": "https://www.fox.com/us/10-places-where-tesla-vehicles-dealerships-were-attacked-year",
+                    "source": "fox",
+                    "sentiment": 0.8294551594572392
+                },
+                {
+                    "title": "SCOOP: Bill preventing activist judges from blocking Trump's agenda backed by White House",
+                    "url": "https://www.fox.com/politics/scoop-bill-preventing-activist-judges-from-blocking-trumps-agenda-backed-white-house",
+                    "source": "fox",
+                    "sentiment": -0.4993379947454275
+                },
+                {
+                    "title": "Fox News Politics Newsletter: A Primer on Abolishing the Dept of Education",
+                    "url": "https://www.fox.com/politics/fox-news-politics-newsletter-primer-abolishing-dept-education",
+                    "source": "fox",
+                    "sentiment": -0.12673597971502382
+                },
+                {
+                    "title": "Fox News Politics: DeSantis Calls on Congress to Rein in Courts",
+                    "url": "https://www.fox.com/politics/fox-news-politics-desantis-calls-congress-rein-courts",
+                    "source": "fox",
+                    "sentiment": 0.4821540288594699
+                },
+                {
+                    "title": "Fox News Politics Newsletter: Trump Calls for 'Lunatic' Judge's Impeachment",
+                    "url": "https://www.fox.com/politics/fox-news-politics-newsletter-trump-calls-lunatic-judges-impeachment",
+                    "source": "fox",
+                    "sentiment": -0.17850763039716666
+                },
+                {
+                    "title": "Trump's approval 'as high as it's ever been' heading into his 2nd term, Bret Baier reports",
+                    "url": "https://www.foxnews.com/video/6370298656112",
+                    "source": "fox",
+                    "sentiment": -0.5722263135805328
+                },
+                {
+                    "title": "Coming up on Friday, March 21 edition of 'Special Report'",
+                    "url": "https://www.foxnews.com/video/6370300318112",
+                    "source": "fox",
+                    "sentiment": -0.15829057585896855
+                },
+                {
+                    "title": "Trump approval ratings at record high, new Fox polls show",
+                    "url": "https://www.foxnews.com/video/6370298252112",
+                    "source": "fox",
+                    "sentiment": 0.16392488174904818
+                },
+                {
+                    "title": "Academic targeted over Palestinian support, lawyers say",
+                    "url": "https://www.foxnews.com/video/6370298786112",
+                    "source": "fox",
+                    "sentiment": -0.08173309749728608
+                },
+                {
+                    "title": "How Donald Trump dominates the news, both positively and negatively",
+                    "url": "https://www.fox.com/politics/how-donald-trump-dominates-news-both-positively-negatively",
+                    "source": "fox",
+                    "sentiment": -0.9182923035416772
+                },
+                {
+                    "title": "Trump accuses Big Media of \u2018illegal\u2019 reporting, virtually abolishes Voice of America",
+                    "url": "https://www.fox.com/politics/trump-accuses-big-media-illegal-reporting-virtually-abolishes-voice-america",
+                    "source": "fox",
+                    "sentiment": -0.7871488586454811
+                }
+            ]
+        },
+        "trump_zelenskyy_putin": {
+            "neutral_summary": "In a recent development, Ukrainian President Volodymyr Zelensky has agreed to pause attacks on energy targets following a call with former U.S. President Donald Trump. Similarly, after a conversation with Trump, Russian President Vladimir Putin has consented to halt attacks on Ukraine's energy and infrastructure. However, uncertainties persist regarding the specifics of the discussions between Trump and Putin.",
+            "articles": [
+                {
+                    "title": "Zelensky agrees to pause attacks on energy in call with Trump, but questions remain about what Trump and Putin hammered out",
+                    "url": "https://www.cnn.com/2025/03/19/politics/trump-zelensky-putin-phone-calls/index.html",
+                    "source": "cnn",
+                    "sentiment": -0.8152115280499901
+                },
+                {
+                    "title": "After call with Trump, Putin agrees to pause attacks on Ukraine\u2019s energy and infrastructure targets",
+                    "url": "https://www.cnn.com/2025/03/18/politics/trump-putin-ceasefire-russia-ukraine-war/index.html",
+                    "source": "cnn",
+                    "sentiment": 0.3038338818499233
+                }
+            ]
+        },
+        "election": {
+            "neutral_summary": "The article \"Anatomy of three Trump elections: How Americans shifted in 2024 vs. 2020 and 2016\" analyzes the voting patterns and shifts in American electorate across Donald Trump's three presidential election campaigns. It compares voter behavior and demographic changes from the 2016 election, where Trump first won the presidency, to the 2020 election, where he lost to Joe Biden, and the 2024 election, where",
+            "articles": [
+                {
+                    "title": "Anatomy of three Trump elections: How Americans shifted in 2024 vs. 2020 and 2016",
+                    "url": "https://www.cnn.com/interactive/2024/politics/2020-2016-exit-polls-2024-dg/",
+                    "source": "cnn",
+                    "sentiment": -0.531154501017784
+                }
+            ]
+        }
+    },
+    "timestamp": "2025-03-21T00:43:44.563Z"
+}
