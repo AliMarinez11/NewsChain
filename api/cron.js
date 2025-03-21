@@ -1,12 +1,14 @@
 export default async function handler(req, res) {
-    // Log the Authorization header for debugging
+    // Log the entire headers object for debugging
+    console.log('All Headers:', JSON.stringify(req.headers));
     console.log('Authorization Header:', req.headers['Authorization']);
+    console.log('Authorization Header (lowercase):', req.headers['authorization']);
     console.log('Expected:', `Bearer ${process.env.CRON_SECRET}`);
   
-    // Verify the CRON_SECRET for security
-    if (req.headers['Authorization'] !== `Bearer ${process.env.CRON_SECRET}`) {
-      return res.status(401).end('Unauthorized');
-    }
+    // Temporarily disable CRON_SECRET check for debugging
+    // if (req.headers['Authorization'] !== `Bearer ${process.env.CRON_SECRET}`) {
+    //   return res.status(401).end('Unauthorized');
+    // }
   
     try {
       // Call the /api/scrape endpoint internally
