@@ -2,6 +2,9 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import os
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.cluster import KMeans
+from collections import Counter
 
 # Headers for web scraping
 scrape_headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36'}
@@ -30,21 +33,53 @@ def scrape_source(source_info):
             articles.append({"title": title, "url": link, "source": source_name})
     return articles
 
-# Categorize articles
+# Categorize articles dynamically using clustering
 def categorize_articles(articles):
+    if not articles:
+        return {}
+
+    # Extract titles for clustering
+    titles = [article["title"] for article in articles]
+
+    # Convert titles to TF-IDF vectors
+    vectorizer = TfidfVectorizer(stop_words='english')
+    X = vectorizer.fit_transform(titles)
+    feature_names = vectorizer.get_feature_names_out()
+
+    # Determine the number of clusters (e.g., square root of the number of articles)
+    num_clusters = min(int(len(articles) ** 0.5), len(articles))
+    num_clusters = max(2, num_clusters)  # Ensure at least 2 clusters if possible
+
+    # Perform K-Means clustering
+    kmeans = KMeans(n_clusters=num_clusters, random_state=42)
+    kmeans.fit(X)
+    labels = kmeans.labels_
+
+    # Group articles by cluster
+    clusters = {}
+    for i, (article, label) in enumerate(zip(articles, labels)):
+        cluster_id = f"cluster_{label}"
+        if cluster_id not in clusters:
+            clusters[cluster_id] = []
+        clusters[cluster_id].append(article)
+
+    # Generate meaningful category names based on most frequent words in each cluster
     narratives = {}
-    for article in articles:
-        title = article["title"].lower()
-        narrative_key = "other"
-        if "trump" in title and "crypto" in title:
-            narrative_key = "trump_crypto"
-        elif "election" in title:
-            narrative_key = "election"
-        elif "trump" in title and ("zelenskyy" in title or "putin" in title):
-            narrative_key = "trump_zelenskyy_putin"
-        if narrative_key not in narratives:
-            narratives[narrative_key] = []
-        narratives[narrative_key].append(article)
+    for label, cluster_articles in clusters.items():
+        # Extract all titles in this cluster
+        cluster_titles = [article["title"] for article in cluster_articles]
+        # Convert to TF-IDF vectors again to find top words
+        cluster_X = vectorizer.transform(cluster_titles)
+        # Sum the TF-IDF scores for each word across all titles in the cluster
+        word_scores = cluster_X.sum(axis=0).A1
+        # Get the indices of the top 2 words
+        top_word_indices = word_scores.argsort()[-2:][::-1]
+        # Get the top 2 words
+        top_words = [feature_names[idx] for idx in top_word_indices]
+        # Create a category name from the top words
+        category_name = "_".join(top_words).lower()
+        narratives[category_name] = cluster_articles
+
     return narratives
 
 # Main function
@@ -56,7 +91,7 @@ def main():
         articles = scrape_source(source_info)
         all_articles.extend(articles)
     
-    # Categorize
+    # Categorize dynamically
     raw_narratives = categorize_articles(all_articles)
     
     # Save raw data
