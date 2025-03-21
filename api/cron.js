@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     console.log('Authorization Header (lowercase):', req.headers['authorization']);
     console.log('Expected:', `Bearer ${process.env.CRON_SECRET}`);
   
-    // Temporarily disable CRON_SECRET check for debugging
+    // Temporarily disable CRON_SECRET check
     // if (req.headers['Authorization'] !== `Bearer ${process.env.CRON_SECRET}`) {
     //   return res.status(401).end('Unauthorized');
     // }
