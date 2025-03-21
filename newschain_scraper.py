@@ -2,9 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import os
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.cluster import KMeans
 from collections import Counter
+import re
 
 # Headers for web scraping
 scrape_headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36'}
@@ -33,54 +32,65 @@ def scrape_source(source_info):
             articles.append({"title": title, "url": link, "source": source_name})
     return articles
 
-# Categorize articles dynamically using clustering
+# Simple keyword-based clustering for categorization
 def categorize_articles(articles):
     if not articles:
         return {}
 
-    # Extract titles for clustering
-    titles = [article["title"] for article in articles]
+    # Stop words to ignore
+    stop_words = set(['the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by'])
 
-    # Convert titles to TF-IDF vectors
-    vectorizer = TfidfVectorizer(stop_words='english')
-    X = vectorizer.fit_transform(titles)
-    feature_names = vectorizer.get_feature_names_out()
+    # Extract keywords from titles
+    article_keywords = []
+    for article in articles:
+        # Tokenize the title: lowercase, remove punctuation, split into words
+        title = article["title"].lower()
+        words = re.findall(r'\b\w+\b', title)
+        # Filter out stop words
+        keywords = [word for word in words if word not in stop_words and len(word) > 3]
+        article_keywords.append((article, keywords))
 
-    # Determine the number of clusters (e.g., square root of the number of articles)
-    num_clusters = min(int(len(articles) ** 0.5), len(articles))
-    num_clusters = max(2, num_clusters)  # Ensure at least 2 clusters if possible
-
-    # Perform K-Means clustering
-    kmeans = KMeans(n_clusters=num_clusters, random_state=42)
-    kmeans.fit(X)
-    labels = kmeans.labels_
-
-    # Group articles by cluster
+    # Group articles by shared keywords
     clusters = {}
-    for i, (article, label) in enumerate(zip(articles, labels)):
-        cluster_id = f"cluster_{label}"
-        if cluster_id not in clusters:
-            clusters[cluster_id] = []
-        clusters[cluster_id].append(article)
+    used_articles = set()
+    cluster_id = 0
 
-    # Generate meaningful category names based on most frequent words in each cluster
-    narratives = {}
-    for label, cluster_articles in clusters.items():
-        # Extract all titles in this cluster
-        cluster_titles = [article["title"] for article in cluster_articles]
-        # Convert to TF-IDF vectors again to find top words
-        cluster_X = vectorizer.transform(cluster_titles)
-        # Sum the TF-IDF scores for each word across all titles in the cluster
-        word_scores = cluster_X.sum(axis=0).A1
-        # Get the indices of the top 2 words
-        top_word_indices = word_scores.argsort()[-2:][::-1]
-        # Get the top 2 words
-        top_words = [feature_names[idx] for idx in top_word_indices]
-        # Create a category name from the top words
-        category_name = "_".join(top_words).lower()
-        narratives[category_name] = cluster_articles
+    for i, (article, keywords) in enumerate(article_keywords):
+        if i in used_articles:
+            continue
 
-    return narratives
+        # Start a new cluster
+        cluster = [article]
+        cluster_keywords = set(keywords)
+        used_articles.add(i)
+
+        # Look for other articles with overlapping keywords
+        for j, (other_article, other_keywords) in enumerate(article_keywords[i+1:], start=i+1):
+            if j in used_articles:
+                continue
+            # Check for at least one shared keyword
+            if cluster_keywords.intersection(other_keywords):
+                cluster.append(other_article)
+                cluster_keywords.update(other_keywords)
+                used_articles.add(j)
+
+        # Generate a category name from the top 2 keywords in the cluster
+        all_words = []
+        for art in cluster:
+            words = re.findall(r'\b\w+\b', art["title"].lower())
+            all_words.extend([word for word in words if word not in stop_words and len(word) > 3])
+        word_counts = Counter(all_words)
+        top_words = [word for word, count in word_counts.most_common(2)]
+        category_name = "_".join(top_words) if top_words else f"cluster_{cluster_id}"
+        clusters[category_name] = cluster
+        cluster_id += 1
+
+    # Add remaining articles to an "other" category
+    other_articles = [article for i, (article, _) in enumerate(article_keywords) if i not in used_articles]
+    if other_articles:
+        clusters["other"] = other_articles
+
+    return clusters
 
 # Main function
 def main():
