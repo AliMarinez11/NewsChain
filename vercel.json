@@ -1,32 +1,22 @@
 {
-    "builds": [
-      {
-        "src": "api/neutralize.js",
-        "use": "@vercel/node"
-      },
-
-      {
-        "src": "*.html",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "api/summarize.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/api/neutralize",
-        "dest": "api/neutralize.js"
-      },
-      
-      {
-        "src": "/(.*)",
-        "dest": "index.html"
-      },
-      {
-        "src": "/api/summarize",
-        "dest": "api/summarize.js"
-      }
-    ]
-  }
+  "builds": [
+    {
+      "src": "api/neutralize.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/neutralize",
+      "dest": "api/neutralize.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "index.html"
+    }
+  ]
+}
