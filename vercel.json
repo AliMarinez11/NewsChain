@@ -4,10 +4,7 @@
         "src": "api/neutralize.js",
         "use": "@vercel/node"
       },
-      {
-        "src": "api/narratives.js",
-        "use": "@vercel/node"
-      },
+
       {
         "src": "*.html",
         "use": "@vercel/static"
@@ -18,10 +15,7 @@
         "src": "/api/neutralize",
         "dest": "api/neutralize.js"
       },
-      {
-        "src": "/api/narratives",
-        "dest": "api/narratives.js"
-      },
+      
       {
         "src": "/(.*)",
         "dest": "index.html"

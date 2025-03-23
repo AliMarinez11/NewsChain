@@ -1,77 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>NewsChain Narratives</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      background-color: #f4f4f4;
-    }
-    h1 {
-      text-align: center;
-      color: #333;
-    }
-    h2 {
-      color: #555;
-    }
-    .category {
-      background-color: #fff;
-      padding: 15px;
-      margin: 10px 0;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-    .summary {
-      font-style: italic;
-      color: #666;
-    }
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    li {
-      margin: 5px 0;
-    }
-    a {
-      color: #007bff;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
-  <script>
-    async function loadNarratives() {
-      try {
-        const response = await fetch('/api/narratives');
-        const data = await response.json();
-        const container = document.getElementById('narratives');
-        for (const [key, narrative] of Object.entries(data.narratives)) {
-          const div = document.createElement('div');
-          div.className = 'category';
-          div.innerHTML = `
-            <h2>${key.replace('_', ' ').toUpperCase()}</h2>
-            <p class="summary"><strong>Neutral Summary:</strong> ${narrative.neutral_summary}</p>
-            <ul>
-              ${narrative.articles.map(article => `
-                <li>${article.source} (${article.sentiment.toFixed(2)}): <a href="${article.url}" target="_blank">${article.title}</a></li>
-              `).join('')}
-            </ul>
-          `;
-          container.appendChild(div);
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsChain Narratives</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
         }
-      } catch (error) {
-        console.error('Error loading narratives:', error);
-        const container = document.getElementById('narratives');
-        container.innerHTML = '<p>Error loading narratives. Please try again later.</p>';
-      }
-    }
-    window.onload = loadNarratives;
-  </script>
+        .narrative {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .narrative h2 {
+            margin-top: 0;
+        }
+        .article {
+            margin-left: 20px;
+        }
+    </style>
 </head>
 <body>
-  <h1>NewsChain Narratives</h1>
-  <div id="narratives"></div>
+    <h1>NewsChain Narratives</h1>
+    <div id="narratives-container"></div>
+
+    <script>
+        // Fetch narratives from the /api/neutralize endpoint
+        fetch('/api/neutralize')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const container = document.getElementById('narratives-container');
+                // Loop through the validNarratives object
+                for (const category in data) {
+                    const narrative = data[category];
+                    const narrativeDiv = document.createElement('div');
+                    narrativeDiv.className = 'narrative';
+                    narrativeDiv.innerHTML = `
+                        <h2>${category}</h2>
+                        <p><strong>Summary:</strong> ${narrative.summary || 'No summary available'}</p>
+                        <h3>Articles:</h3>
+                        ${narrative.articles.map(article => `
+                            <div class="article">
+                                <p><strong>${article.source}:</strong> <a href="${article.url}" target="_blank">${article.title}</a></p>
+                                <p>${article.content.slice(0, 200)}...</p>
+                            </div>
+                        `).join('')}
+                    `;
+                    container.appendChild(narrativeDiv);
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching narratives:', error);
+                document.getElementById('narratives-container').innerHTML = '<p>Error loading narratives.</p>';
+            });
+    </script>
 </body>
 </html>
