@@ -8,6 +8,10 @@
       {
         "src": "*.html",
         "use": "@vercel/static"
+      },
+      {
+        "src": "api/summarize.js",
+        "use": "@vercel/node"
       }
     ],
     "routes": [
@@ -19,6 +23,10 @@
       {
         "src": "/(.*)",
         "dest": "index.html"
+      },
+      {
+        "src": "/api/summarize",
+        "dest": "api/summarize.js"
       }
     ]
   }
