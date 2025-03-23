@@ -1,4 +1,3 @@
-// Use ESM import syntax
 import fs from 'fs';
 import path from 'path';
 import fetch from 'node-fetch';
@@ -13,14 +12,14 @@ export default async function handler(req, res) {
         }
 
         // Use dynamic file path for filtered_narratives.json
-        const filePath = path.join(process.cwd(), 'filtered_narratives.json');
-        if (!fs.existsSync(filePath)) {
-            throw new Error('Filtered narratives file not found at ' + filePath);
+        const filteredPath = path.join(process.cwd(), 'filtered_narratives.json');
+        if (!fs.existsSync(filteredPath)) {
+            throw new Error('Filtered narratives file not found at ' + filteredPath);
         }
 
         // Read the filtered narratives
-        const rawData = fs.readFileSync(filePath);
-        const filteredNarratives = JSON.parse(rawData);
+        const rawFilteredData = fs.readFileSync(filteredPath);
+        const filteredNarratives = JSON.parse(rawFilteredData);
 
         // Extract valid narratives
         const validNarratives = filteredNarratives.validNarratives;
@@ -39,8 +38,26 @@ export default async function handler(req, res) {
             return res.status(200).json(finalResult.validNarratives);
         }
 
-        // Split narratives into batches (e.g., 3 narratives per batch)
-        const batchSize = 3;
+        // Check if summaries already exist in narratives_filtered.json
+        const outputPath = path.join(process.cwd(), 'narratives_filtered.json');
+        let summarizedNarratives = { validNarratives: {}, excludedNarratives: filteredNarratives.excludedNarratives || {} };
+        if (fs.existsSync(outputPath)) {
+            const rawSummarizedData = fs.readFileSync(outputPath);
+            summarizedNarratives = JSON.parse(rawSummarizedData);
+
+            // Check if all valid narratives are already summarized
+            const allSummarized = Object.keys(validNarratives).every(category => 
+                summarizedNarratives.validNarratives[category] && summarizedNarratives.validNarratives[category].summary
+            );
+
+            if (allSummarized) {
+                console.log('All narratives already summarized, serving from cache.');
+                return res.status(200).json(summarizedNarratives.validNarratives);
+            }
+        }
+
+        // Split narratives into batches (1 narrative per batch to minimize API call time)
+        const batchSize = 1;
         const narrativeEntries = Object.entries(validNarratives);
         const batches = [];
         for (let i = 0; i < narrativeEntries.length; i += batchSize) {
@@ -50,13 +67,23 @@ export default async function handler(req, res) {
         }
 
         // Summarize each batch
-        const summarizedNarratives = { validNarratives: {} };
         const apiUrl = 'https://api.x.ai/v1/chat/completions';
         console.log('Using model: grok-2');
 
         for (let batchIndex = 0; batchIndex < batches.length; batchIndex++) {
             const batch = batches[batchIndex];
-            console.log(`Summarizing batch ${batchIndex + 1} of ${batches.length} with ${Object.keys(batch).length} narratives`);
+            const batchCategories = Object.keys(batch);
+
+            // Skip if this batch is already summarized
+            const batchAlreadySummarized = batchCategories.every(category => 
+                summarizedNarratives.validNarratives[category] && summarizedNarratives.validNarratives[category].summary
+            );
+            if (batchAlreadySummarized) {
+                console.log(`Batch ${batchIndex + 1} already summarized, skipping.`);
+                continue;
+            }
+
+            console.log(`Summarizing batch ${batchIndex + 1} of ${batches.length} with ${batchCategories.length} narratives`);
 
             const summarizationPrompt = `
             You are Grok, created by xAI. I have a JSON file containing a collection of "narratives" that have been identified as valid, meaning their articles discuss the same general subject. Each narrative object has a key (the category name) and a value that is an array of at least 2 news articles, along with their titles, URLs, sources, and content. Your task is to:
@@ -82,8 +109,9 @@ export default async function handler(req, res) {
             Return the results with summaries in pure JSON format.
             `;
 
-            // Make the API call for summarization
+            // Make the API call for summarization with timing
             console.log(`Sending request to xAI API for summarization (batch ${batchIndex + 1}):`, apiUrl);
+            const startTime = Date.now();
             const summarizationResponse = await fetch(apiUrl, {
                 method: 'POST',
                 headers: {
@@ -98,9 +126,11 @@ export default async function handler(req, res) {
                             content: summarizationPrompt
                         }
                     ],
-                    max_tokens: 8192
+                    max_tokens: 4096 // Reduced to minimize response time
                 })
             });
+            const endTime = Date.now();
+            console.log(`xAI API response time for batch ${batchIndex + 1}: ${(endTime - startTime) / 1000} seconds`);
 
             if (!summarizationResponse.ok) {
                 const errorText = await summarizationResponse.text();
@@ -126,21 +156,14 @@ export default async function handler(req, res) {
 
             // Merge the summarized narratives into the final result
             Object.assign(summarizedNarratives.validNarratives, batchSummarizedNarratives.validNarratives);
+
+            // Save the updated summaries after each batch to persist progress
+            fs.writeFileSync(outputPath, JSON.stringify(summarizedNarratives, null, 4));
+            console.log(`Updated narratives_filtered.json after batch ${batchIndex + 1}`);
         }
 
-        // Prepare the final result
-        const finalResult = {
-            validNarratives: summarizedNarratives.validNarratives,
-            excludedNarratives: filteredNarratives.excludedNarratives || {}
-        };
-
-        // Save the filtered narratives with summaries
-        const outputPath = path.join(process.cwd(), 'narratives_filtered.json');
-        fs.writeFileSync(outputPath, JSON.stringify(finalResult, null, 4));
-        console.log(`Filtered narratives with summaries saved to ${outputPath}`);
-
         // Return the result to the app
-        res.status(200).json(finalResult.validNarratives);
+        res.status(200).json(summarizedNarratives.validNarratives);
     } catch (error) {
         console.error('Error in API handler:', error);
         res.status(500).json({ error: error.message });
