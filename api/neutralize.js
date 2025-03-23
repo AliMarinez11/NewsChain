@@ -45,7 +45,8 @@ export default async function handler(req, res) {
                 method: 'GET',
                 timeout: 15000,  // 15 seconds to account for API call
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'X-Internal-Call': 'newschain-internal'  // Custom header to bypass auth
                 }
             });
 
@@ -68,7 +69,7 @@ export default async function handler(req, res) {
         // Return the summaries (fresh or cached)
         res.status(200).json(summarizedNarratives.validNarratives);
     } catch (error) {
-        console.error('Error in cache handler:', error);
+        console.error('Error in neutralize handler:', error);
         res.status(500).json({ error: error.message });
     }
 }

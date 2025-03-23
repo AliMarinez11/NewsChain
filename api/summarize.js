@@ -5,6 +5,13 @@ import fetch from 'node-fetch';
 // API handler for background summarization
 export default async function handler(req, res) {
     try {
+        // Allow internal calls from /api/neutralize.js using a custom header
+        const internalCallHeader = req.headers['x-internal-call'];
+        if (!internalCallHeader || internalCallHeader !== 'newschain-internal') {
+            console.log('Unauthorized access to /api/summarize.js');
+            return res.status(401).json({ error: 'Unauthorized' });
+        }
+
         console.log('Starting summarization process...');
 
         // Ensure xAI API key is set
