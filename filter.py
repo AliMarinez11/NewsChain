@@ -6,8 +6,6 @@ from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-import gensim
-from gensim import corpora
 
 # Download NLTK data
 nltk.download('punkt')
@@ -31,30 +29,6 @@ def compute_tfidf_similarity(article1, article2):
     similarity = cosine_similarity(tfidf_matrix[0:1], tfidf_matrix[1:2])[0][0]
     return similarity
 
-def perform_topic_modeling(articles):
-    processed_articles = [preprocess_text(article).split() for article in articles]
-    dictionary = corpora.Dictionary(processed_articles)
-    corpus = [dictionary.doc2bow(text) for text in processed_articles]
-    
-    # Run LDA with adjusted parameters
-    lda_model = gensim.models.LdaModel(corpus, num_topics=5, id2word=dictionary, passes=30)
-    topics = [lda_model[doc] for doc in corpus]
-    
-    # Convert topic distributions to vectors
-    num_topics = 5
-    topic_vector_1 = np.zeros(num_topics)
-    topic_vector_2 = np.zeros(num_topics)
-    
-    for topic_id, prob in topics[0]:
-        topic_vector_1[topic_id] = prob
-    for topic_id, prob in topics[1]:
-        topic_vector_2[topic_id] = prob
-    
-    # Compute cosine similarity between topic distributions
-    topic_similarity = cosine_similarity([topic_vector_1], [topic_vector_2])[0][0]
-    print(f"Topic similarity: {topic_similarity:.2f}")  # Debug log
-    return topic_similarity > 0.1  # Lowered threshold
-
 def filter_narratives(raw_narratives):
     result = {"validNarratives": {}, "excludedNarratives": {}}
 
@@ -66,14 +40,9 @@ def filter_narratives(raw_narratives):
 
         article_texts = [article["content"] for article in articles]
         similarity = compute_tfidf_similarity(article_texts[0], article_texts[1])
-        print(f"TF-IDF similarity for {category}: {similarity:.2f}")  # Debug log
-        if similarity < 0.1:
+        print(f"TF-IDF similarity for {category}: {similarity:.2f}")
+        if similarity < 0.15:  # Increased threshold to 0.15
             result["excludedNarratives"][category] = {"reason": f"Articles do not share the same general subject (TF-IDF similarity: {similarity:.2f})."}
-            continue
-
-        # Reintroduce topic modeling check
-        if not perform_topic_modeling(article_texts):
-            result["excludedNarratives"][category] = {"reason": "Articles do not share a similar dominant topic based on LDA topic modeling."}
             continue
 
         result["validNarratives"][category] = {"articles": articles}
