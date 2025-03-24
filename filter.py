@@ -52,7 +52,8 @@ def filter_narratives(raw_narratives):
         print(f"TF-IDF similarity for {category}: {similarity:.2f}")
         print(f"Keyword overlap for {category}: {overlap:.2f}, Common tokens: {list(common_tokens)[:10]}")
 
-        if similarity < 0.1:  # Lowered threshold to 0.1
+        # Pass if either TF-IDF similarity is above 0.05 or keyword overlap is above 0.05
+        if similarity < 0.05 and overlap < 0.05:
             result["excludedNarratives"][category] = {
                 "reason": f"Articles do not share the same general subject (TF-IDF similarity: {similarity:.2f}, Keyword overlap: {overlap:.2f}).",
                 "common_tokens": list(common_tokens)[:10]

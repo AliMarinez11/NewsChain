@@ -29,6 +29,68 @@ def compute_tfidf_similarity(article1, article2):
     similarity = cosine_similarity(tfidf_matrix[0:1], tfidf_matrix[1:2])[0][0]
     return similarity
 
+# Function to compute average TF-IDF similarity within a cluster
+def compute_cluster_similarity(cluster_texts):
+    similarities = []
+    for i in range(len(cluster_texts)):
+        for j in range(i + 1, len(cluster_texts)):
+            similarity = compute_tfidf_similarity(cluster_texts[i], cluster_texts[j])
+            similarities.append(similarity)
+    return sum(similarities) / len(similarities) if similarities else 0
+
+# Function to refine clusters by splitting based on TF-IDF similarity
+def refine_clusters(clustered_articles, all_articles, article_to_category):
+    refined_clusters = {}
+    cluster_id = 0
+
+    for old_cluster_id, articles in clustered_articles.items():
+        if len(articles) < 2:
+            continue  # Skip clusters with fewer than 2 articles
+
+        # Compute initial cluster similarity
+        cluster_texts = [clean_boilerplate(article['content']) + " " + article['title'] for article in articles]
+        avg_similarity = compute_cluster_similarity(cluster_texts)
+        print(f"Cluster {old_cluster_id} initial average TF-IDF similarity: {avg_similarity:.2f}")
+
+        # If the cluster is cohesive (avg similarity >= 0.15), keep it as is
+        if avg_similarity >= 0.15:
+            refined_clusters[cluster_id] = articles
+            cluster_id += 1
+            continue
+
+        # Otherwise, split the cluster into sub-clusters using K-means
+        sub_num_clusters = max(int(len(articles) // 2), 1)  # Aim for smaller sub-clusters
+        if sub_num_clusters < 2:
+            refined_clusters[cluster_id] = articles
+            cluster_id += 1
+            continue
+
+        # Compute TF-IDF vectors for sub-clustering
+        vectorizer = TfidfVectorizer()
+        tfidf_matrix = vectorizer.fit_transform(cluster_texts)
+        kmeans = KMeans(n_clusters=sub_num_clusters, random_state=42)
+        sub_cluster_labels = kmeans.fit_predict(tfidf_matrix)
+
+        # Group articles by sub-cluster
+        sub_clusters = {}
+        for idx, label in enumerate(sub_cluster_labels):
+            if label not in sub_clusters:
+                sub_clusters[label] = []
+            sub_clusters[label].append(articles[idx])
+
+        # Add sub-clusters as new clusters if they have at least 2 articles
+        for sub_label, sub_articles in sub_clusters.items():
+            if len(sub_articles) < 2:
+                continue  # Skip sub-clusters with fewer than 2 articles
+            sub_cluster_texts = [clean_boilerplate(article['content']) + " " + article['title'] for article in sub_articles]
+            sub_avg_similarity = compute_cluster_similarity(sub_cluster_texts)
+            print(f"Sub-cluster {cluster_id} (from Cluster {old_cluster_id}) average TF-IDF similarity: {sub_avg_similarity:.2f}")
+            if sub_avg_similarity >= 0.05:  # Keep threshold for sub-clusters
+                refined_clusters[cluster_id] = sub_articles
+                cluster_id += 1
+
+    return refined_clusters, all_articles, article_to_category
+
 # Load existing raw_narratives.json safely
 def load_existing_narratives():
     try:
@@ -85,7 +147,7 @@ def main():
     tfidf_matrix = vectorizer.fit_transform(cleaned_texts)
 
     # Apply K-means clustering
-    num_clusters = max(int(len(cleaned_texts) // 3), 1)  # Reduced to form larger clusters
+    num_clusters = max(int(len(cleaned_texts) // 3), 1)  # Keep number of clusters
     print(f"Number of clusters: {num_clusters}")
     kmeans = KMeans(n_clusters=num_clusters, random_state=42)
     cluster_labels = kmeans.fit_predict(tfidf_matrix)
@@ -97,26 +159,12 @@ def main():
             clustered_articles[label] = []
         clustered_articles[label].append(all_articles[idx])
 
-    # Form narratives from clusters, ensuring at least 2 articles per narrative
+    # Refine clusters
+    refined_clusters, all_articles, article_to_category = refine_clusters(clustered_articles, all_articles, article_to_category)
+
+    # Form narratives from refined clusters
     filtered_narratives = {}
-    for cluster_id, articles in clustered_articles.items():
-        print(f"Cluster {cluster_id} size: {len(articles)} articles")
-        if len(articles) < 2:
-            continue  # Skip clusters with fewer than 2 articles
-
-        # Compute average TF-IDF similarity within the cluster
-        cluster_texts = [clean_boilerplate(article['content']) + " " + article['title'] for article in articles]
-        similarities = []
-        for i in range(len(cluster_texts)):
-            for j in range(i + 1, len(cluster_texts)):
-                similarity = compute_tfidf_similarity(cluster_texts[i], cluster_texts[j])
-                similarities.append(similarity)
-
-        avg_similarity = sum(similarities) / len(similarities) if similarities else 0
-        print(f"Cluster {cluster_id} average TF-IDF similarity: {avg_similarity:.2f}")
-        if avg_similarity < 0.2:  # Threshold for cluster cohesion
-            continue
-
+    for cluster_id, articles in refined_clusters.items():
         # Use the original category of the first article as the narrative name
         category = article_to_category[all_articles.index(articles[0])]
         filtered_narratives[category] = articles
