@@ -6,6 +6,7 @@ from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+from collections import Counter
 
 # Download NLTK data
 nltk.download('punkt')
@@ -29,6 +30,13 @@ def compute_tfidf_similarity(article1, article2):
     similarity = cosine_similarity(tfidf_matrix[0:1], tfidf_matrix[1:2])[0][0]
     return similarity
 
+def compute_keyword_overlap(article1, article2):
+    tokens1 = set(word_tokenize(preprocess_text(article1)))
+    tokens2 = set(word_tokenize(preprocess_text(article2)))
+    common_tokens = tokens1.intersection(tokens2)
+    overlap = len(common_tokens) / min(len(tokens1), len(tokens2)) if min(len(tokens1), len(tokens2)) > 0 else 0
+    return overlap, common_tokens
+
 def filter_narratives(raw_narratives):
     result = {"validNarratives": {}, "excludedNarratives": {}}
 
@@ -40,9 +48,15 @@ def filter_narratives(raw_narratives):
 
         article_texts = [article["content"] for article in articles]
         similarity = compute_tfidf_similarity(article_texts[0], article_texts[1])
+        overlap, common_tokens = compute_keyword_overlap(article_texts[0], article_texts[1])
         print(f"TF-IDF similarity for {category}: {similarity:.2f}")
-        if similarity < 0.15:  # Increased threshold to 0.15
-            result["excludedNarratives"][category] = {"reason": f"Articles do not share the same general subject (TF-IDF similarity: {similarity:.2f})."}
+        print(f"Keyword overlap for {category}: {overlap:.2f}, Common tokens: {list(common_tokens)[:10]}")
+
+        if similarity < 0.1:  # Lowered threshold to 0.1
+            result["excludedNarratives"][category] = {
+                "reason": f"Articles do not share the same general subject (TF-IDF similarity: {similarity:.2f}, Keyword overlap: {overlap:.2f}).",
+                "common_tokens": list(common_tokens)[:10]
+            }
             continue
 
         result["validNarratives"][category] = {"articles": articles}

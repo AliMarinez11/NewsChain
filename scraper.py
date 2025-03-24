@@ -3,11 +3,12 @@ from bs4 import BeautifulSoup
 import json
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.cluster import KMeans
 import re
+import numpy as np
 
 # Function to clean boilerplate text
 def clean_boilerplate(text):
-    # Remove common boilerplate phrases
     boilerplate_patterns = [
         r"Welcome to the Fox News Politics newsletter, with the latest updates.*?\.\.\.",
         r"Fox News Flash top headlines are here\. Check out what's clicking on Foxnews\.com\.",
@@ -18,7 +19,6 @@ def clean_boilerplate(text):
     cleaned_text = text
     for pattern in boilerplate_patterns:
         cleaned_text = re.sub(pattern, '', cleaned_text, flags=re.MULTILINE)
-    # Remove extra whitespace
     cleaned_text = re.sub(r'\s+', ' ', cleaned_text).strip()
     return cleaned_text
 
@@ -29,17 +29,29 @@ def compute_tfidf_similarity(article1, article2):
     similarity = cosine_similarity(tfidf_matrix[0:1], tfidf_matrix[1:2])[0][0]
     return similarity
 
-# Simulated scraper function (replace with your actual scraping logic)
+# Load existing raw_narratives.json safely
+def load_existing_narratives():
+    try:
+        with open('raw_narratives.json', 'r') as f:
+            content = f.read().strip()
+            if not content:
+                return {}
+            return json.loads(content)
+    except (json.JSONDecodeError, FileNotFoundError):
+        return {}
+
+# Simulated scraper function (replace with actual scraping logic later)
 def scrape_articles(search_terms):
-    # Placeholder: This should be replaced with your actual scraping logic
-    # For now, we'll use the existing narratives_raw.json data as a base
-    with open('raw_narratives.json', 'r') as f:
-        raw_narratives = json.load(f)
+    raw_narratives = load_existing_narratives()
+    if not raw_narratives:
+        print("No valid existing data found, initializing with placeholder data.")
+        with open('raw_narratives.json', 'r') as f:
+            raw_narratives = json.load(f)
     return raw_narratives
 
-# Main function to scrape and group articles into narratives
+# Main function to scrape and group articles into narratives using clustering
 def main():
-    # Example search terms (replace with your actual search terms)
+    # Example search terms (replace with actual search terms)
     search_terms = [
         "Musk Pentagon", "Ukraine Putin", "Department Education", "Boasberg Judge",
         "Canada State", "Biden Former", "King Files", "Government Federal",
@@ -47,42 +59,70 @@ def main():
         "Walz 2024", "Crisis Been", "First Term", "Maher Food"
     ]
 
-    # Scrape articles (replace with your actual scraping logic)
+    # Scrape articles
     raw_narratives = scrape_articles(search_terms)
 
-    # Process narratives to improve quality
-    filtered_narratives = {}
+    # Collect all articles into a flat list for clustering
+    all_articles = []
+    article_to_category = []
     for category, articles in raw_narratives.items():
-        if len(articles) < 2:
-            continue  # Skip narratives with fewer than 2 articles
-
-        # Clean boilerplate from article content
-        cleaned_articles = []
         for article in articles:
-            cleaned_content = clean_boilerplate(article['content'])
-            # Count words in cleaned content
-            word_count = len(cleaned_content.split())
-            if word_count < 100:
-                continue  # Skip articles with fewer than 100 words
-            article['content'] = cleaned_content
-            cleaned_articles.append(article)
+            all_articles.append(article)
+            article_to_category.append(category)
 
-        if len(cleaned_articles) < 2:
-            continue  # Skip narratives with fewer than 2 articles after cleaning
+    print(f"Total articles before filtering: {len(all_articles)}")
 
-        # Compute TF-IDF similarity between the articles
-        similarity = compute_tfidf_similarity(cleaned_articles[0]['content'], cleaned_articles[1]['content'])
-        if similarity < 0.2:
-            continue  # Skip narratives with TF-IDF similarity below 0.2
+    # Clean article content and prepare for clustering
+    cleaned_texts = [clean_boilerplate(article['content']) + " " + article['title'] for article in all_articles]
+    print(f"Total articles after cleaning: {len(cleaned_texts)}")
 
-        # If the narrative passes all checks, add it to the filtered set
-        filtered_narratives[category] = cleaned_articles
+    # Compute TF-IDF vectors for clustering
+    vectorizer = TfidfVectorizer()
+    tfidf_matrix = vectorizer.fit_transform(cleaned_texts)
+
+    # Apply K-means clustering
+    num_clusters = max(int(len(cleaned_texts) // 1), 1)  # Increased to form more clusters
+    print(f"Number of clusters: {num_clusters}")
+    kmeans = KMeans(n_clusters=num_clusters, random_state=42)
+    cluster_labels = kmeans.fit_predict(tfidf_matrix)
+
+    # Group articles by cluster
+    clustered_articles = {}
+    for idx, label in enumerate(cluster_labels):
+        if label not in clustered_articles:
+            clustered_articles[label] = []
+        clustered_articles[label].append(all_articles[idx])
+
+    # Form narratives from clusters, ensuring at least 2 articles per narrative
+    filtered_narratives = {}
+    for cluster_id, articles in clustered_articles.items():
+        print(f"Cluster {cluster_id} size: {len(articles)} articles")
+        if len(articles) < 2:
+            continue  # Skip clusters with fewer than 2 articles
+
+        # Compute average TF-IDF similarity within the cluster
+        cluster_texts = [clean_boilerplate(article['content']) + " " + article['title'] for article in articles]
+        similarities = []
+        for i in range(len(cluster_texts)):
+            for j in range(i + 1, len(cluster_texts)):
+                similarity = compute_tfidf_similarity(cluster_texts[i], cluster_texts[j])
+                similarities.append(similarity)
+
+        avg_similarity = sum(similarities) / len(similarities) if similarities else 0
+        print(f"Cluster {cluster_id} average TF-IDF similarity: {avg_similarity:.2f}")
+        if avg_similarity < 0.2:  # Lowered threshold to allow more clusters
+            continue
+
+        # Use the original category of the first article as the narrative name
+        category = article_to_category[all_articles.index(articles[0])]
+        filtered_narratives[category] = articles
 
     # Save the filtered narratives to raw_narratives.json
     with open('raw_narratives.json', 'w') as f:
         json.dump(filtered_narratives, f, indent=4)
 
     print(f"Collected {len(filtered_narratives)} narratives, saved to raw_narratives.json")
+    return filtered_narratives
 
 if __name__ == "__main__":
     main()
