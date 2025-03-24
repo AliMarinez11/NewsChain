@@ -63,8 +63,8 @@ def filter_narratives(raw_narratives):
 
     return result
 
-# Load raw narratives
-with open('raw_narratives.json', 'r') as f:
+# Load clustered narratives
+with open('clustered_narratives.json', 'r') as f:
     raw_narratives = json.load(f)
 
 # Filter narratives

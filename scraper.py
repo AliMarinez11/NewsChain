@@ -62,13 +62,17 @@ def main():
     # Scrape articles
     raw_narratives = scrape_articles(search_terms)
 
-    # Collect all articles into a flat list for clustering
+    # Collect all articles into a flat list and remove duplicates
     all_articles = []
     article_to_category = []
+    seen_articles = set()
     for category, articles in raw_narratives.items():
         for article in articles:
-            all_articles.append(article)
-            article_to_category.append(category)
+            article_key = (article['title'], article['url'])  # Unique identifier for an article
+            if article_key not in seen_articles:
+                seen_articles.add(article_key)
+                all_articles.append(article)
+                article_to_category.append(category)
 
     print(f"Total articles before filtering: {len(all_articles)}")
 
@@ -81,7 +85,7 @@ def main():
     tfidf_matrix = vectorizer.fit_transform(cleaned_texts)
 
     # Apply K-means clustering
-    num_clusters = max(int(len(cleaned_texts) // 1), 1)  # Increased to form more clusters
+    num_clusters = max(int(len(cleaned_texts) // 3), 1)  # Reduced to form larger clusters
     print(f"Number of clusters: {num_clusters}")
     kmeans = KMeans(n_clusters=num_clusters, random_state=42)
     cluster_labels = kmeans.fit_predict(tfidf_matrix)
@@ -110,18 +114,18 @@ def main():
 
         avg_similarity = sum(similarities) / len(similarities) if similarities else 0
         print(f"Cluster {cluster_id} average TF-IDF similarity: {avg_similarity:.2f}")
-        if avg_similarity < 0.2:  # Lowered threshold to allow more clusters
+        if avg_similarity < 0.2:  # Threshold for cluster cohesion
             continue
 
         # Use the original category of the first article as the narrative name
         category = article_to_category[all_articles.index(articles[0])]
         filtered_narratives[category] = articles
 
-    # Save the filtered narratives to raw_narratives.json
-    with open('raw_narratives.json', 'w') as f:
+    # Save the clustered narratives to a separate file
+    with open('clustered_narratives.json', 'w') as f:
         json.dump(filtered_narratives, f, indent=4)
 
-    print(f"Collected {len(filtered_narratives)} narratives, saved to raw_narratives.json")
+    print(f"Collected {len(filtered_narratives)} narratives, saved to clustered_narratives.json")
     return filtered_narratives
 
 if __name__ == "__main__":
