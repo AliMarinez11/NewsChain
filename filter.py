@@ -4,7 +4,7 @@ import numpy as np
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
-from sklearn.feature_extraction.text import TfidfVectorizer
+from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 from collections import Counter
 
@@ -17,17 +17,17 @@ nltk.download('punkt_tab')
 # Initialize NLP tools
 stop_words = set(stopwords.words('english'))
 lemmatizer = WordNetLemmatizer()
-tfidf_vectorizer = TfidfVectorizer()
+model = SentenceTransformer('all-MiniLM-L6-v2')
 
 def preprocess_text(text):
     tokens = word_tokenize(text.lower())
     tokens = [lemmatizer.lemmatize(token) for token in tokens if token.isalnum() and token not in stop_words]
     return ' '.join(tokens)
 
-def compute_tfidf_similarity(article1, article2):
+def compute_similarity(article1, article2):
     processed_texts = [preprocess_text(article1), preprocess_text(article2)]
-    tfidf_matrix = tfidf_vectorizer.fit_transform(processed_texts)
-    similarity = cosine_similarity(tfidf_matrix[0:1], tfidf_matrix[1:2])[0][0]
+    embeddings = model.encode(processed_texts)
+    similarity = cosine_similarity([embeddings[0]], [embeddings[1]])[0][0]
     return similarity
 
 def compute_keyword_overlap(article1, article2):
@@ -40,27 +40,32 @@ def compute_keyword_overlap(article1, article2):
 def filter_narratives(raw_narratives):
     result = {"validNarratives": {}, "excludedNarratives": {}}
 
-    for category, articles in raw_narratives.items():
-        print(f"\nProcessing category: {category}")
+    for cluster_id, cluster_data in raw_narratives.items():
+        articles = cluster_data["articles"]
+        generated_title = cluster_data["generated_title"]
+        print(f"\nProcessing cluster: {cluster_id} (Title: {generated_title})")
         if len(articles) < 2:
-            result["excludedNarratives"][category] = {"reason": "Less than 2 articles in the narrative."}
+            result["excludedNarratives"][cluster_id] = {"reason": "Less than 2 articles in the narrative."}
             continue
 
         article_texts = [article["content"] for article in articles]
-        similarity = compute_tfidf_similarity(article_texts[0], article_texts[1])
+        similarity = compute_similarity(article_texts[0], article_texts[1])
         overlap, common_tokens = compute_keyword_overlap(article_texts[0], article_texts[1])
-        print(f"TF-IDF similarity for {category}: {similarity:.2f}")
-        print(f"Keyword overlap for {category}: {overlap:.2f}, Common tokens: {list(common_tokens)[:10]}")
+        print(f"Similarity for {cluster_id}: {similarity:.2f}")
+        print(f"Keyword overlap for {cluster_id}: {overlap:.2f}, Common tokens: {list(common_tokens)[:10]}")
 
-        # Pass if either TF-IDF similarity is above 0.05 or keyword overlap is above 0.05
-        if similarity < 0.05 and overlap < 0.05:
-            result["excludedNarratives"][category] = {
-                "reason": f"Articles do not share the same general subject (TF-IDF similarity: {similarity:.2f}, Keyword overlap: {overlap:.2f}).",
+        # Pass if either similarity is above 0.7 (adjusted for Sentence-BERT) or keyword overlap is above 0.05
+        if similarity < 0.7 and overlap < 0.05:
+            result["excludedNarratives"][cluster_id] = {
+                "reason": f"Articles do not share the same general subject (Similarity: {similarity:.2f}, Keyword overlap: {overlap:.2f}).",
                 "common_tokens": list(common_tokens)[:10]
             }
             continue
 
-        result["validNarratives"][category] = {"articles": articles}
+        result["validNarratives"][cluster_id] = {
+            "articles": articles,
+            "generated_title": generated_title
+        }
 
     return result
 
