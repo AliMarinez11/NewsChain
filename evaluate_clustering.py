@@ -1,6 +1,7 @@
 import json
 import numpy as np
 from sklearn.metrics import precision_recall_fscore_support, adjusted_rand_score, normalized_mutual_info_score
+from sklearn.preprocessing import LabelEncoder
 
 # Load ground truth
 with open('ground_truth.json', 'r') as f:
@@ -27,9 +28,17 @@ clustered_articles = list(article_to_predicted_label.keys())
 ground_labels = [article_to_ground_label[article] for article in clustered_articles]
 predicted_labels = [article_to_predicted_label[article] for article in clustered_articles]
 
+# Encode labels as integers for metric computation
+label_encoder_ground = LabelEncoder()
+label_encoder_pred = LabelEncoder()
+ground_labels_encoded = label_encoder_ground.fit_transform(ground_labels)
+predicted_labels_encoded = label_encoder_pred.fit_transform(predicted_labels)
+
 # Compute clustering metrics for clustered articles only
 if len(ground_labels) > 0:  # Ensure there are clustered articles
-    precision, recall, f1, _ = precision_recall_fscore_support(ground_labels, predicted_labels, average='weighted', zero_division=0)
+    precision, recall, f1, _ = precision_recall_fscore_support(
+        ground_labels_encoded, predicted_labels_encoded, average='weighted', zero_division=0
+    )
 else:
     precision, recall, f1 = 0.0, 0.0, 0.0
 

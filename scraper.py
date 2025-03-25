@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import json
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
-from sklearn.cluster import AgglomerativeClustering
+from sklearn.cluster import DBSCAN
 import re
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -87,19 +87,20 @@ def main():
     model = SentenceTransformer('all-MiniLM-L6-v2')
     embeddings = model.encode(cleaned_texts, show_progress_bar=True)
 
-    # Apply hierarchical clustering
-    clustering = AgglomerativeClustering(
-        n_clusters=None,  # Let the distance threshold determine the number of clusters
-        distance_threshold=0.5,  # Increased to form larger clusters
-        metric='cosine',
-        linkage='average'
+    # Apply DBSCAN clustering
+    clustering = DBSCAN(
+        eps=0.3,  # Distance threshold for clustering
+        min_samples=2,  # Minimum articles per cluster
+        metric='cosine'
     )
     cluster_labels = clustering.fit_predict(embeddings)
 
     # Group articles by cluster
     clustered_articles = {}
     for idx, label in enumerate(cluster_labels):
-        cluster_id = f"Cluster_{label}"  # Use cluster IDs instead of predefined names
+        if label == -1:  # DBSCAN labels noise points as -1
+            continue  # Skip unclustered articles
+        cluster_id = f"Cluster_{label}"
         if cluster_id not in clustered_articles:
             clustered_articles[cluster_id] = []
         clustered_articles[cluster_id].append(all_articles[idx])

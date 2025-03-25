@@ -54,8 +54,8 @@ def filter_narratives(raw_narratives):
         print(f"Similarity for {cluster_id}: {similarity:.2f}")
         print(f"Keyword overlap for {cluster_id}: {overlap:.2f}, Common tokens: {list(common_tokens)[:10]}")
 
-        # Pass if either similarity is above 0.7 (adjusted for Sentence-BERT) or keyword overlap is above 0.05
-        if similarity < 0.7 and overlap < 0.05:
+        # Pass if either similarity is above 0.65 or keyword overlap is above 0.01
+        if similarity < 0.65 and overlap < 0.01:  # Further lowered keyword overlap threshold
             result["excludedNarratives"][cluster_id] = {
                 "reason": f"Articles do not share the same general subject (Similarity: {similarity:.2f}, Keyword overlap: {overlap:.2f}).",
                 "common_tokens": list(common_tokens)[:10]
