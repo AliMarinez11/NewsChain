@@ -28,9 +28,10 @@ ground_labels = [article_to_ground_label[article] for article in clustered_artic
 predicted_labels = [article_to_predicted_label[article] for article in clustered_articles]
 
 # Compute clustering metrics for clustered articles only
-precision, recall, f1, _ = precision_recall_fscore_support(ground_labels, predicted_labels, average='weighted', zero_division=0)
-ari = adjusted_rand_score(ground_labels, predicted_labels)
-nmi = normalized_mutual_info_score(ground_labels, predicted_labels)
+if len(ground_labels) > 0:  # Ensure there are clustered articles
+    precision, recall, f1, _ = precision_recall_fscore_support(ground_labels, predicted_labels, average='weighted', zero_division=0)
+else:
+    precision, recall, f1 = 0.0, 0.0, 0.0
 
 # Compute metrics for all articles (including unclustered ones)
 all_articles = list(article_to_ground_label.keys())
@@ -48,3 +49,11 @@ print("Metrics for all articles (including unclustered):")
 print(f"Adjusted Rand Index (ARI): {ari_all:.4f}")
 print(f"Normalized Mutual Information (NMI): {nmi_all:.4f}")
 print(f"Number of narratives formed: {len(filtered_narratives['validNarratives'])}/13")
+
+# Print mapping of clusters to ground truth narratives
+print("\nCluster to Ground Truth Mapping:")
+for cluster_id, cluster_data in filtered_narratives['validNarratives'].items():
+    articles = cluster_data['articles']
+    ground_narratives = [article_to_ground_label[article['title']] for article in articles]
+    most_common_narrative = max(set(ground_narratives), key=ground_narratives.count)
+    print(f"{cluster_id} (Title: {cluster_data['generated_title']}) -> {most_common_narrative} ({ground_narratives})")

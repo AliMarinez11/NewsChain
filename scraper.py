@@ -90,7 +90,7 @@ def main():
     # Apply hierarchical clustering
     clustering = AgglomerativeClustering(
         n_clusters=None,  # Let the distance threshold determine the number of clusters
-        distance_threshold=0.4,  # Increased to form larger clusters
+        distance_threshold=0.5,  # Increased to form larger clusters
         metric='cosine',
         linkage='average'
     )

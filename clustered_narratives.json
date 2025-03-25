@@ -1,5 +1,5 @@
 {
-    "Cluster_6": {
+    "Cluster_1": {
         "articles": [
             {
                 "title": "How to decode a head-spinning few days of Ukraine war diplomacy",
@@ -12,11 +12,23 @@
                 "url": "https://www.foxnews.com/world/trump-eyes-control-ukraines-nuclear-plants-us-prepares-ceasefire-talks-russia",
                 "source": "fox",
                 "content": "Fox News contributor Dan Hoffman joined 'America's Newsroom' to discuss President Donald Trump's negotiations with Russian President Putin on the Ukraine war and why he believes the U.S. should tread lightly in peace talks. As top U.S. officials prepare for a meeting with a Russian delegation in Saudia Arabia Sunday, questions have mounted over how the Trump administration will push Moscow to extend a preliminary ceasefire. Russian President Vladimir Putin this week agreed to temporarily halt strikes on Ukraine's energy infrastructure, which includes Europe's largest nuclear power plant, the Zaporizhzhia Nuclear Power Station. Secretary of State Marco Rubio and National Security Advisor Mike Waltz, who will both travel to Jeddah for the negotiations, said the next step will be to secure a ceasefire over the Black Sea. MILITARY LEADERS TO MEET ON UK-FRANCE 'COALITION OF THE WILLING' PLAN FOR UKRAINE From left, U.S. National Security Advisor Mike Waltz, U.S. Secretary of State Marco Rubi"
+            },
+            {
+                "title": "U.S. pushes for ceasefire in Gaza as Israel-Hamas talks falter",
+                "url": "https://www.reuters.com/world/middle-east/us-pushes-ceasefire-gaza-2025-03-22/",
+                "source": "reuters",
+                "content": "The United States is intensifying diplomatic efforts to secure a ceasefire in Gaza as negotiations between Israel and Hamas have stalled, according to U.S. officials on March 22, 2025. Secretary of State Marco Rubio met with Israeli and Egyptian counterparts in Cairo to propose a 60-day truce, aiming to halt hostilities that have killed thousands since the conflict escalated last year. The proposal includes provisions for increased humanitarian aid to Gaza and a partial withdrawal of Israeli forces from border areas. Hamas has demanded a full withdrawal, a condition Israel has rejected, citing security concerns. The U.S. initiative comes amid growing international pressure to address the humanitarian crisis in Gaza, where over 1 million people are facing severe food shortages. Analysts remain skeptical about the prospects for a lasting agreement, given the deep mistrust between the parties."
+            },
+            {
+                "title": "Gaza ceasefire talks hit deadlock, U.S. steps in with new proposal",
+                "url": "https://www.apnews.com/article/gaza-ceasefire-talks-us-proposal-2025-03-22",
+                "source": "ap",
+                "content": "Negotiations between Israel and Hamas to end the ongoing conflict in Gaza have reached a deadlock, prompting the United States to propose a new ceasefire plan on March 22, 2025. The U.S. proposal, led by Secretary of State Marco Rubio, calls for a 60-day truce, increased humanitarian aid, and a partial Israeli withdrawal from Gaza\u2019s border regions. The plan aims to address the worsening humanitarian crisis, with over 1 million Gazans facing acute food insecurity. Israel has rejected Hamas\u2019s demand for a full withdrawal, citing the need to maintain security against potential attacks. The talks, mediated by Egypt and Qatar, have been marred by mutual distrust, with both sides accusing the other of violating previous agreements. International aid organizations have welcomed the U.S. initiative but caution that a sustainable solution requires addressing the underlying political issues fueling the conflict."
             }
         ],
-        "generated_title": "trump ukraine"
+        "generated_title": "trump gaza"
     },
-    "Cluster_1": {
+    "Cluster_3": {
         "articles": [
             {
                 "title": "Fox News Politics Newsletter: A Primer on Abolishing the Dept of Education",
@@ -31,101 +43,16 @@
                 "content": "Welcome to the Fox News Politics newsletter, with the latest updates on the Trump administration, Capitol Hill and more Fox News politics content. Here's what's happening\u2026 -Illiterate high school grads sue school districts as Ivy League professor warns of 'deeper problem' -Court order halting deportation flights \u2018unconstitutionally impedes\u2019 on executive branch, Trump allies argue -Bernie Sanders, AOC take aim at Trump and Musk, as well as Democrats, at rallies The Justice Department said Friday it is considering invoking the state secrets privilege in its ongoing court battle over the Trump administration\u2019s deportation flights to El Salvador, a tool that could allow them to withhold certain information for national security purposes. In a declaration filed Friday morning, U.S. Deputy Attorney General Todd Blanche told U.S. District Court Judge James Boasberg that he is aware of the Cabinet-level discussions invoking state secrets privilege. Invoking that privilege \"is a serious matter"
             },
             {
-                "title": "Bush DOJ lawyer warns Trump admin against 'terrible mistake' in judicial standoff",
-                "url": "https://www.foxnews.com/politics/bush-doj-lawyer-warns-trump-admin-against-terrible-mistake-judicial-standoff",
-                "source": "fox",
-                "content": "Fox News correspondent Alexandria Hoff has the latest on President Donald Trump's legal challenge on his administration's deportation flights on 'FOX & Friends.' A top former Bush administration lawyer is warning the White House not to begin ignoring court orders amid its standoff over President Donald Trump's deportation flights under the Alien Enemies Act. \"I worry that there might be some people in the administration who would actually like to defy a judicial order. Which I think would be a terrible mistake,\" John Yoo, Distinguished Professor of Law at the University of California at Berkeley, told Fox News Digital in an interview on Tuesday. More than a dozen injunctions have been levied to at least temporarily block Trump policies across the country, including his deportation flights, birthright citizenship reforms and Department of Government Efficiency (DOGE) efforts. Republican allies of the president have accused \"activist judges\" of seeking to override the executive in an imp"
-            }
-        ],
-        "generated_title": "trump fox"
-    },
-    "Cluster_4": {
-        "articles": [
-            {
-                "title": "Canadians in crosshairs of trade war call Trump\u2019s tariffs a \u2018bad dream\u2019",
-                "url": "https://www.cnn.com/2025/03/06/politics/canada-trump-tariffs-impact/index.html",
-                "source": "cnn",
-                "content": "Karim Walji is certain he is about to lose business. Worried he may have to shrink his workforce \u2014 fire people \u2014 for the first time in eight years. He blames President Donald Trump and what Walji sees as a reckless power trip. \u201cHe wants the US to flex their muscle,\u201d said Walji, a partner in AI Industries, a steel fabricating plant in western Canada. \u201cHe wants to show that the US is strong and, \u2018Because I am bigger than you are, I can bully you around, and this is how I am going to do it.\u2019\u201d Last week, AI Industries was a shining example of one of the world\u2019s most remarkable and lucrative trade relationships; US-Canada trade totals just shy of $800 billion annually. This week, it is one piece of a confusing trade confrontation that keeps shifting from war to detente. Trump on Tuesday slapped a new 25% tariff on almost all goods coming from Canada and Mexico. Then on Thursday, Trump suspended some tariffs for nearly one month, his latest about face. Walji prefers no tariffs, of course. Bu"
-            },
-            {
-                "title": "U.S. imposes new tariffs on China, escalating trade tensions",
-                "url": "https://www.reuters.com/business/us-imposes-new-tariffs-on-china-2025-03-20/",
-                "source": "reuters",
-                "content": "The United States has imposed a new round of tariffs on Chinese goods, targeting $200 billion worth of imports, as President Donald Trump seeks to pressure Beijing into trade concessions. The tariffs, announced on March 20, 2025, include a 25% duty on electronics, machinery, and textiles. Trump administration officials claim the tariffs are necessary to address unfair trade practices, including intellectual property theft and forced technology transfers. China has vowed to retaliate, with the Ministry of Commerce stating it will impose counter-tariffs on U.S. goods. The move has raised concerns among economists about potential disruptions to global supply chains and increased costs for consumers. U.S. business groups, including the Chamber of Commerce, have urged both sides to return to negotiations to avoid further escalation."
-            },
-            {
-                "title": "China vows retaliation as U.S. tariffs hit $200 billion in goods",
-                "url": "https://www.apnews.com/article/us-china-tariffs-retaliation-2025-03-21",
-                "source": "ap",
-                "content": "China has promised swift retaliation following the U.S. imposition of new tariffs on $200 billion worth of Chinese imports, announced on March 20, 2025. The tariffs, which include a 25% duty on a wide range of goods such as electronics and textiles, were described by the Trump administration as a response to unfair trade practices. Chinese officials condemned the move as 'economic bullying' and outlined plans to impose tariffs on U.S. agricultural products, including soybeans and pork, which could impact American farmers. The escalating trade war has heightened fears of a global economic slowdown, with analysts warning of potential inflationary pressures. Trade talks between the two nations, which stalled last year, are now under renewed pressure to resume, though no immediate timeline has been set."
-            }
-        ],
-        "generated_title": "tariffs trade"
-    },
-    "Cluster_2": {
-        "articles": [
-            {
-                "title": "Fact check: Trump\u2019s false claims on immigration, Biden, Ukraine in DOJ remarks",
-                "url": "https://www.cnn.com/2025/03/14/politics/fact-check-trump-immigration-biden-ukraine-doj/index.html",
-                "source": "cnn",
-                "content": "President Donald Trump made multiple false claims in a Friday speech at the Department of Justice in which he discussed the legal system and crime but also a wide range of other topics, including immigration, the war in Ukraine and former President Joe Biden. Trump also made numerous allegations for which he provided no evidence, alleging unspecified \u201cegregious crimes\u201d in the government during the Biden administration, corruption among unspecified judges, illegality by media outlets that he claimed cover him too negatively and \u201ccrooked\u201d behavior by law firms connected to cases involving Trump. Here is a fact check of some of his assertions. Trump\u2019s prosecutions and Biden: Trump repeated his regular unsubstantiated claim that former President Joe Biden used his office to wield the legal system against Trump. \u201cEtched onto the walls of this building are the words English philosopher John Locke said: \u2018Where law ends, tyranny begins.\u2019 And I see that, and I saw it over the last four years wh"
-            },
-            {
-                "title": "Fact check: Trump exaggerates trade deficits, his 2024 vote total, Ukraine aid, border crossings and fentanyl deaths",
-                "url": "https://www.cnn.com/2025/03/21/politics/fact-check-trump-oval-office-remarks/index.html",
-                "source": "cnn",
-                "content": "President Donald Trump made at least nine false claims in his Friday remarks to reporters in the Oval Office \u2013 including a series of wildly exaggerated statistics on a variety of topics. Trump used inaccurate figures for the number of votes he received in the 2024 presidential election, US aid to Ukraine, the number of migrants who entered the US during the Biden administration, the US trade deficits with China and Canada, and annual US fentanyl deaths. He also wrongly declared, again, that Honda announced it is building a new factory in Indiana. He repeated his years-old baseless claim that NATO would no longer have existed if not for his first presidency. He told his familiar unsubstantiated story about large numbers of migrants having come from jails in \u201cthe Congo\u201d and elsewhere. And he once more discussed Canada\u2019s dairy tariffs without mentioning a critical fact about them. Here is a fact check. While criticizing a federal judge who is presiding over a challenge to one of Trump\u2019s i"
-            }
-        ],
-        "generated_title": "trump biden"
-    },
-    "Cluster_3": {
-        "articles": [
-            {
-                "title": "Americans think Trump\u2019s cuts will hurt (and help) the country. Here\u2019s how",
-                "url": "https://www.cnn.com/2025/03/15/politics/trump-government-cuts-musk-voters-what-matters/index.html",
-                "source": "cnn",
-                "content": "Senate Democrats\u2019 decision to allow Republicans to pass a spending bill will avert a short-term shutdown, but it will also give Republicans the power to grant President Donald Trump new leverage to control spending for the rest of the year. The Democrats\u2019 tactical retreat from this spending battle means the government will remain open and Trump can more easily carry on with the systemic changes and deep cuts he has done heretofore without the blessing of Congress. Entire divisions at agencies such as the Department of Education and NASA have already been laid off, along with the gutting of the government\u2019s consumer protection arm, the Consumer Financial Protection Bureau. A large-scale \u201creduction in force\u201d of federal workers is expected in the near future. Americans are both deeply concerned and somewhat excited about the prospect of Trump\u2019s cuts, whose potential breadth i"
-            },
-            {
-                "title": "Trump administration unveils tax cut plan ahead of midterms",
-                "url": "https://www.reuters.com/business/trump-unveils-tax-cut-plan-2025-03-24/",
-                "source": "reuters",
-                "content": "The Trump administration announced a new tax cut plan on March 24, 2025, aimed at boosting support among Republican voters ahead of the midterm elections. The proposal includes reducing the corporate tax rate to 15% and expanding tax credits for small businesses, which the administration claims will stimulate economic growth. Treasury Secretary Scott Bessent stated that the plan would create millions of jobs and increase wages for American workers. Critics, including Democratic lawmakers, argue that the tax cuts disproportionately benefit corporations and the wealthy, potentially widening income inequality. The proposal faces an uphill battle in Congress, where Democrats control the House and have signaled opposition to large-scale tax cuts. Economists are divided on the plan\u2019s impact, with some warning of increased federal deficits and others predicting a short-term economic boost."
-            },
-            {
-                "title": "Trump\u2019s new tax cut proposal sparks debate over economic impact",
-                "url": "https://www.apnews.com/article/trump-tax-cut-proposal-debate-2025-03-24",
-                "source": "ap",
-                "content": "President Donald Trump unveiled a new tax cut proposal on March 24, 2025, targeting a corporate tax rate reduction to 15% and expanded credits for small businesses. The plan, intended to rally Republican support before the midterms, has ignited a fierce debate over its economic impact. Supporters argue it will spur job creation and wage growth, with Treasury Secretary Scott Bessent highlighting its potential to revitalize the economy. Democrats, however, criticize the proposal as a giveaway to the wealthy, warning it could exacerbate income inequality and balloon the federal deficit. The plan\u2019s passage in Congress is uncertain, as Democrats in the House have vowed to block it, advocating for more targeted relief for middle-class families. Economic analysts predict a mixed outcome, with short-term growth possible but long-term fiscal challenges looming if the cuts are not offset by spending reductions."
-            }
-        ],
-        "generated_title": "tax trump"
-    },
-    "Cluster_18": {
-        "articles": [
-            {
-                "title": "Musk\u2019s Tesla faces new lawsuit over self-driving claims",
-                "url": "https://www.foxnews.com/tech/musks-tesla-faces-new-lawsuit-over-self-driving-claims",
-                "source": "fox",
-                "content": "Tesla, led by CEO Elon Musk, is facing a new lawsuit filed in California federal court on Tuesday, alleging the company made misleading claims about its self-driving technology. The suit, brought by a group of Tesla owners, claims the company\u2019s Autopilot and Full Self-Driving (FSD) features do not perform as advertised, citing multiple accidents linked to the systems. \u201cMusk has repeatedly promised full autonomy, but the technology isn\u2019t there yet,\u201d said lead plaintiff John Doe, who claims his Tesla Model 3 failed to stop at a red light while in FSD mode. The lawsuit seeks damages and a court order to stop Tesla from marketing its systems as self-driving. Tesla has faced similar lawsuits in the past, with Musk defending the technology as a critical step toward safer roads. The company has not yet responded to the latest filing."
-            },
-            {
-                "title": "Tesla sued over misleading self-driving technology claims",
-                "url": "https://www.cnn.com/2025/03/18/tech/tesla-lawsuit-self-driving-claims/index.html",
-                "source": "cnn",
-                "content": "A group of Tesla owners has filed a lawsuit against the company in California federal court on March 18, 2025, accusing CEO Elon Musk and Tesla of misleading consumers about the capabilities of its self-driving technology. The plaintiffs allege that Tesla\u2019s Autopilot and Full Self-Driving (FSD) systems have failed to deliver on Musk\u2019s promises of full autonomy, pointing to several accidents caused by the systems\u2019 errors. \u201cWe were sold a vision of self-driving cars that doesn\u2019t match reality,\u201d said plaintiff Jane Roe, whose Tesla Model Y allegedly veered into oncoming traffic while using FSD. The lawsuit demands compensation for affected owners and an injunction to prevent Tesla from advertising its technology as self-driving. Tesla has faced growing scrutiny over its autonomous driving claims, with regulators also investigating the company\u2019s safety record."
-            }
-        ],
-        "generated_title": "tesla driving"
-    },
-    "Cluster_0": {
-        "articles": [
-            {
                 "title": "A fateful moment looms as Trump's team seeks to bypass the judiciary",
                 "url": "https://www.cnn.com/2025/03/18/politics/trump-deportations-judge-executive-power/index.html",
                 "source": "cnn",
                 "content": "The most chilling aspect of a new White House claim of boundless executive power is not whether officials ignored a judge's order to halt deportations of Venezuelan alleged gang members. It's that some senior Trump administration aides seem not to care if they did. There are even claims that some judges are simply too junior to question the actions of a president. The furor caused by the administration's peacetime use of wartime powers under the 18th-century Alien Enemies Act is the latest, and perhaps most overt, sign of President Donald Trump's sense of omnipotence. He's also betting voters will reward him for, in his view, keeping them safe with ruthless immigration enforcement rather than recoil from his challenges to the Constitution. The growing showdown is so critical because the courts are one of the final checks on Trump's power after he crushed opposition in the Republican Party and helped shut the Democratic Party out of any power in any branch of government in Washington. T"
+            },
+            {
+                "title": "Bush DOJ lawyer warns Trump admin against 'terrible mistake' in judicial standoff",
+                "url": "https://www.foxnews.com/politics/bush-doj-lawyer-warns-trump-admin-against-terrible-mistake-judicial-standoff",
+                "source": "fox",
+                "content": "Fox News correspondent Alexandria Hoff has the latest on President Donald Trump's legal challenge on his administration's deportation flights on 'FOX & Friends.' A top former Bush administration lawyer is warning the White House not to begin ignoring court orders amid its standoff over President Donald Trump's deportation flights under the Alien Enemies Act. \"I worry that there might be some people in the administration who would actually like to defy a judicial order. Which I think would be a terrible mistake,\" John Yoo, Distinguished Professor of Law at the University of California at Berkeley, told Fox News Digital in an interview on Tuesday. More than a dozen injunctions have been levied to at least temporarily block Trump policies across the country, including his deportation flights, birthright citizenship reforms and Department of Government Efficiency (DOGE) efforts. Republican allies of the president have accused \"activist judges\" of seeking to override the executive in an imp"
             },
             {
                 "title": "What is a constitutional crisis and are we in one right now?",
@@ -148,8 +75,111 @@
         ],
         "generated_title": "trump court"
     },
+    "Cluster_4": {
+        "articles": [
+            {
+                "title": "Trump delivers on a generational conservative goal, but it could be risky for Republicans as well as students",
+                "url": "https://www.cnn.com/2025/03/21/politics/education-department-trump-executive-order-universities/index.html",
+                "source": "cnn",
+                "content": "President Donald Trump is claiming generational wins for the Republican Party on the cultural and ideological battlefield of education \u2013 which MAGA supporters see as a hostile bastion of liberal power ripe for disruption. In a move he described as \u201c45 years in the making,\u201d Trump, seated among children at desks in a mock classroom set up in the White House, signed an executive order designed to obliterate the Department of Education. \u201cIt sounds strange, doesn\u2019t it? Department of Education, we\u2019re going to eliminate it,\u201d Trump said, aware that he\u2019s unlikely to get Congress to vote to abolish the agency \u2013 but that he can suffocate it from the inside anyway. Republicans see the department as a hotbed of liberal activism, a source of \u201cwoke\u201d social policies on diversity and inclusion and an ally of teachers\u2019 unions, which are a foundation of the Democratic Party. A sense among GOP voters that the department promotes values antithetical to conservative principles was exacerbated by school clos"
+            },
+            {
+                "title": "Trump\u2019s moves to hollow out government could be difficult to undo",
+                "url": "https://www.cnn.com/2025/03/20/politics/trump-musk-federal-government-reagan/index.html",
+                "source": "cnn",
+                "content": "Americans have grown accustomed to dramatic shifts in policy each time control of the White House changes between parties. But across a wide range of domestic and foreign policy issues, President Donald Trump is now pursuing structural changes to the federal government that could prove very difficult for the next Democratic president to undo. On many fronts, Trump is seeking not just to reduce spending or to roll back regulation, but to hollow out the federal government\u2019s institutional capacity to influence events both domestically and internationally. Far more aggressively than in his first term, Trump is unraveling many of the key mechanisms Washington for decades has used to advance its goals. Together with Elon Musk and his Department of Government Efficiency, the Trump administration has sought to rapidly deconstruct governmental power through, among other approaches, massive reductions in the federal workforce; the sale of federal buildings; the complete elimination of federal ag"
+            }
+        ],
+        "generated_title": "trump federal"
+    },
+    "Cluster_10": {
+        "articles": [
+            {
+                "title": "Canadians in crosshairs of trade war call Trump\u2019s tariffs a \u2018bad dream\u2019",
+                "url": "https://www.cnn.com/2025/03/06/politics/canada-trump-tariffs-impact/index.html",
+                "source": "cnn",
+                "content": "Karim Walji is certain he is about to lose business. Worried he may have to shrink his workforce \u2014 fire people \u2014 for the first time in eight years. He blames President Donald Trump and what Walji sees as a reckless power trip. \u201cHe wants the US to flex their muscle,\u201d said Walji, a partner in AI Industries, a steel fabricating plant in western Canada. \u201cHe wants to show that the US is strong and, \u2018Because I am bigger than you are, I can bully you around, and this is how I am going to do it.\u2019\u201d Last week, AI Industries was a shining example of one of the world\u2019s most remarkable and lucrative trade relationships; US-Canada trade totals just shy of $800 billion annually. This week, it is one piece of a confusing trade confrontation that keeps shifting from war to detente. Trump on Tuesday slapped a new 25% tariff on almost all goods coming from Canada and Mexico. Then on Thursday, Trump suspended some tariffs for nearly one month, his latest about face. Walji prefers no tariffs, of course. Bu"
+            },
+            {
+                "title": "U.S. imposes new tariffs on China, escalating trade tensions",
+                "url": "https://www.reuters.com/business/us-imposes-new-tariffs-on-china-2025-03-20/",
+                "source": "reuters",
+                "content": "The United States has imposed a new round of tariffs on Chinese goods, targeting $200 billion worth of imports, as President Donald Trump seeks to pressure Beijing into trade concessions. The tariffs, announced on March 20, 2025, include a 25% duty on electronics, machinery, and textiles. Trump administration officials claim the tariffs are necessary to address unfair trade practices, including intellectual property theft and forced technology transfers. China has vowed to retaliate, with the Ministry of Commerce stating it will impose counter-tariffs on U.S. goods. The move has raised concerns among economists about potential disruptions to global supply chains and increased costs for consumers. U.S. business groups, including the Chamber of Commerce, have urged both sides to return to negotiations to avoid further escalation."
+            },
+            {
+                "title": "China vows retaliation as U.S. tariffs hit $200 billion in goods",
+                "url": "https://www.apnews.com/article/us-china-tariffs-retaliation-2025-03-21",
+                "source": "ap",
+                "content": "China has promised swift retaliation following the U.S. imposition of new tariffs on $200 billion worth of Chinese imports, announced on March 20, 2025. The tariffs, which include a 25% duty on a wide range of goods such as electronics and textiles, were described by the Trump administration as a response to unfair trade practices. Chinese officials condemned the move as 'economic bullying' and outlined plans to impose tariffs on U.S. agricultural products, including soybeans and pork, which could impact American farmers. The escalating trade war has heightened fears of a global economic slowdown, with analysts warning of potential inflationary pressures. Trade talks between the two nations, which stalled last year, are now under renewed pressure to resume, though no immediate timeline has been set."
+            }
+        ],
+        "generated_title": "tariffs trade"
+    },
+    "Cluster_6": {
+        "articles": [
+            {
+                "title": "Fact check: Trump\u2019s false claims on immigration, Biden, Ukraine in DOJ remarks",
+                "url": "https://www.cnn.com/2025/03/14/politics/fact-check-trump-immigration-biden-ukraine-doj/index.html",
+                "source": "cnn",
+                "content": "President Donald Trump made multiple false claims in a Friday speech at the Department of Justice in which he discussed the legal system and crime but also a wide range of other topics, including immigration, the war in Ukraine and former President Joe Biden. Trump also made numerous allegations for which he provided no evidence, alleging unspecified \u201cegregious crimes\u201d in the government during the Biden administration, corruption among unspecified judges, illegality by media outlets that he claimed cover him too negatively and \u201ccrooked\u201d behavior by law firms connected to cases involving Trump. Here is a fact check of some of his assertions. Trump\u2019s prosecutions and Biden: Trump repeated his regular unsubstantiated claim that former President Joe Biden used his office to wield the legal system against Trump. \u201cEtched onto the walls of this building are the words English philosopher John Locke said: \u2018Where law ends, tyranny begins.\u2019 And I see that, and I saw it over the last four years wh"
+            },
+            {
+                "title": "Fact check: Trump exaggerates trade deficits, his 2024 vote total, Ukraine aid, border crossings and fentanyl deaths",
+                "url": "https://www.cnn.com/2025/03/21/politics/fact-check-trump-oval-office-remarks/index.html",
+                "source": "cnn",
+                "content": "President Donald Trump made at least nine false claims in his Friday remarks to reporters in the Oval Office \u2013 including a series of wildly exaggerated statistics on a variety of topics. Trump used inaccurate figures for the number of votes he received in the 2024 presidential election, US aid to Ukraine, the number of migrants who entered the US during the Biden administration, the US trade deficits with China and Canada, and annual US fentanyl deaths. He also wrongly declared, again, that Honda announced it is building a new factory in Indiana. He repeated his years-old baseless claim that NATO would no longer have existed if not for his first presidency. He told his familiar unsubstantiated story about large numbers of migrants having come from jails in \u201cthe Congo\u201d and elsewhere. And he once more discussed Canada\u2019s dairy tariffs without mentioning a critical fact about them. Here is a fact check. While criticizing a federal judge who is presiding over a challenge to one of Trump\u2019s i"
+            }
+        ],
+        "generated_title": "trump biden"
+    },
+    "Cluster_2": {
+        "articles": [
+            {
+                "title": "DOGE Madness: 'Sweet 16' bracket set up as craziest federal waste competes for championship",
+                "url": "https://www.foxnews.com/politics/doge-madness-sweet-16-bracket-set-up-craziest-federal-waste-competes-championship",
+                "source": "fox",
+                "content": "Sen. Joni Ernst, R-Iowa, joined 'Fox & Friends' to discuss Elon Musk's effort to expose wasteful government spending at the Defense and Education Departments as USAID expenditures receive heavy backlash. EXCLUSIVE: Department of Government Efficiency (DOGE) leaders in the Senate will be releasing an NCAA-style bracket of the craziest items of federal waste needing to be cut, as the public will be able to actively vote for their picks in successive Elite Eight and Final Four rounds. Sen. Joni Ernst, R-Iowa, the leader of the upper chamber's DOGE caucus, told Fox News Digital on Friday that while college basketball's March Madness only lasts a month, the federal government's \"spending madness\" is a year-round, debt-defying event. \"The Senate DOGE Caucus is dividing and conquering to bring waste to a squealing halt,\" Ernst said. \"This March, we will be scoring buckets for taxpayers by increasing transparency, stopping the silly spending, and making government actually start to work for th"
+            },
+            {
+                "title": "DOGE USAID budget cuts hit UN in 'worst liquidity crisis since its establishment'",
+                "url": "https://www.foxnews.com/world/doge-usaid-budget-cuts-hit-un-worst-liquidity-crisis-since-its-establishment",
+                "source": "fox",
+                "content": "DOGE representative Sam Corcos and Treasury Secretary Scott Bessent break down the Trump administration's department to end wasteful spending, on 'The Ingraham Angle.' FIRST ON FOX: President Donald Trump's administration\u2019s use of Elon Musk's DOGE to cut USAID spending is having a deep impact on the United Nations Department of Safety and Security (UNDSS), according to internal U.N. emails shared with Fox News Digital. In an email sent early Friday morning, president of the U.N. Field Staff Union, Milan Victor Dawoh wrote that the USAID funding cut resulted in \"approximately $30 million\" having been \"removed from the extra-budgetary (XB) resources, resulting in a significant reduction in staffing.\" Dawoh\u2019s email warns that the U.N. \"is currently experiencing its worst liquidity crisis since its establishment. The situation is expected to deteriorate further before any improvement occurs.\" Dawoh said that UNDSS will lose 100 employees and that its presence will be eliminated in 35 to 45"
+            }
+        ],
+        "generated_title": "doge government"
+    },
     "Cluster_7": {
         "articles": [
+            {
+                "title": "Americans think Trump\u2019s cuts will hurt (and help) the country. Here\u2019s how",
+                "url": "https://www.cnn.com/2025/03/15/politics/trump-government-cuts-musk-voters-what-matters/index.html",
+                "source": "cnn",
+                "content": "Senate Democrats\u2019 decision to allow Republicans to pass a spending bill will avert a short-term shutdown, but it will also give Republicans the power to grant President Donald Trump new leverage to control spending for the rest of the year. The Democrats\u2019 tactical retreat from this spending battle means the government will remain open and Trump can more easily carry on with the systemic changes and deep cuts he has done heretofore without the blessing of Congress. Entire divisions at agencies such as the Department of Education and NASA have already been laid off, along with the gutting of the government\u2019s consumer protection arm, the Consumer Financial Protection Bureau. A large-scale \u201creduction in force\u201d of federal workers is expected in the near future. Americans are both deeply concerned and somewhat excited about the prospect of Trump\u2019s cuts, whose potential breadth i"
+            },
+            {
+                "title": "Trump administration unveils tax cut plan ahead of midterms",
+                "url": "https://www.reuters.com/business/trump-unveils-tax-cut-plan-2025-03-24/",
+                "source": "reuters",
+                "content": "The Trump administration announced a new tax cut plan on March 24, 2025, aimed at boosting support among Republican voters ahead of the midterm elections. The proposal includes reducing the corporate tax rate to 15% and expanding tax credits for small businesses, which the administration claims will stimulate economic growth. Treasury Secretary Scott Bessent stated that the plan would create millions of jobs and increase wages for American workers. Critics, including Democratic lawmakers, argue that the tax cuts disproportionately benefit corporations and the wealthy, potentially widening income inequality. The proposal faces an uphill battle in Congress, where Democrats control the House and have signaled opposition to large-scale tax cuts. Economists are divided on the plan\u2019s impact, with some warning of increased federal deficits and others predicting a short-term economic boost."
+            },
+            {
+                "title": "Trump\u2019s new tax cut proposal sparks debate over economic impact",
+                "url": "https://www.apnews.com/article/trump-tax-cut-proposal-debate-2025-03-24",
+                "source": "ap",
+                "content": "President Donald Trump unveiled a new tax cut proposal on March 24, 2025, targeting a corporate tax rate reduction to 15% and expanded credits for small businesses. The plan, intended to rally Republican support before the midterms, has ignited a fierce debate over its economic impact. Supporters argue it will spur job creation and wage growth, with Treasury Secretary Scott Bessent highlighting its potential to revitalize the economy. Democrats, however, criticize the proposal as a giveaway to the wealthy, warning it could exacerbate income inequality and balloon the federal deficit. The plan\u2019s passage in Congress is uncertain, as Democrats in the House have vowed to block it, advocating for more targeted relief for middle-class families. Economic analysts predict a mixed outcome, with short-term growth possible but long-term fiscal challenges looming if the cuts are not offset by spending reductions."
+            }
+        ],
+        "generated_title": "tax trump"
+    },
+    "Cluster_0": {
+        "articles": [
+            {
+                "title": "'Chaos and confusion': How Democrats infiltrated 'thunderous' GOP town halls",
+                "url": "https://www.foxnews.com/politics/chaos-confusion-how-democrats-infiltrated-thunderous-gop-town-halls",
+                "source": "fox",
+                "content": "Senator Bernie Sanders speaks to Fox News Digital about Trump, Musk and Democrats during his 'Fight Oligarchy Tour' in Tempe, Arizona. Large campaign rallies and town halls are pillars of election year politics, but two months into President Donald Trump's second term, town halls are erupting across the country. While Republicans have largely been told to stay home, Democrats seem to be driving the narrative for the first time since Trump returned to the White House. Democrats last week launched a coordinated effort to host \"People\u2019s Town Halls\" in all 50 states after disruptive protests led Republican leadership to advise against hosting in-person town halls. The first week of town halls brought a new wave of political drama and engagement resembling that of an election year. \"When folks get out of the DC bubble and into communities across the country, there is one undeniably clear trend emerging: Americans are feeling betrayed by Republicans. Across party lines, people are furious th"
+            },
             {
                 "title": "Walz defends 2024 campaign strategy amid Democratic losses",
                 "url": "https://www.foxnews.com/politics/walz-defends-2024-campaign-strategy-democratic-losses",
@@ -163,7 +193,24 @@
                 "content": "Democrats are grappling with their 2024 election loss to President Donald Trump, with Minnesota Governor Tim Walz, the party\u2019s vice-presidential nominee, facing scrutiny for his role in the campaign. In interviews with party leaders and strategists, many pointed to Walz\u2019s inability to connect with swing voters as a key factor in the defeat. \u201cWalz was supposed to bring in the Midwest, but he didn\u2019t deliver,\u201d said a senior Democratic operative, speaking on condition of anonymity. The campaign\u2019s focus on rural economic issues, championed by Walz, failed to counter Trump\u2019s messaging on inflation and border security, which resonated more with voters. Walz has defended his approach, arguing that the party needs to rebuild trust with working-class voters. The Democratic Party is now at a crossroads, with some calling for a return to centrist policies and others advocating for a more progressive agenda."
             }
         ],
-        "generated_title": "walz party"
+        "generated_title": "walz halls"
+    },
+    "Cluster_8": {
+        "articles": [
+            {
+                "title": "Musk\u2019s Tesla faces new lawsuit over self-driving claims",
+                "url": "https://www.foxnews.com/tech/musks-tesla-faces-new-lawsuit-over-self-driving-claims",
+                "source": "fox",
+                "content": "Tesla, led by CEO Elon Musk, is facing a new lawsuit filed in California federal court on Tuesday, alleging the company made misleading claims about its self-driving technology. The suit, brought by a group of Tesla owners, claims the company\u2019s Autopilot and Full Self-Driving (FSD) features do not perform as advertised, citing multiple accidents linked to the systems. \u201cMusk has repeatedly promised full autonomy, but the technology isn\u2019t there yet,\u201d said lead plaintiff John Doe, who claims his Tesla Model 3 failed to stop at a red light while in FSD mode. The lawsuit seeks damages and a court order to stop Tesla from marketing its systems as self-driving. Tesla has faced similar lawsuits in the past, with Musk defending the technology as a critical step toward safer roads. The company has not yet responded to the latest filing."
+            },
+            {
+                "title": "Tesla sued over misleading self-driving technology claims",
+                "url": "https://www.cnn.com/2025/03/18/tech/tesla-lawsuit-self-driving-claims/index.html",
+                "source": "cnn",
+                "content": "A group of Tesla owners has filed a lawsuit against the company in California federal court on March 18, 2025, accusing CEO Elon Musk and Tesla of misleading consumers about the capabilities of its self-driving technology. The plaintiffs allege that Tesla\u2019s Autopilot and Full Self-Driving (FSD) systems have failed to deliver on Musk\u2019s promises of full autonomy, pointing to several accidents caused by the systems\u2019 errors. \u201cWe were sold a vision of self-driving cars that doesn\u2019t match reality,\u201d said plaintiff Jane Roe, whose Tesla Model Y allegedly veered into oncoming traffic while using FSD. The lawsuit demands compensation for affected owners and an injunction to prevent Tesla from advertising its technology as self-driving. Tesla has faced growing scrutiny over its autonomous driving claims, with regulators also investigating the company\u2019s safety record."
+            }
+        ],
+        "generated_title": "tesla driving"
     },
     "Cluster_11": {
         "articles": [
@@ -181,23 +228,6 @@
             }
         ],
         "generated_title": "maher food"
-    },
-    "Cluster_8": {
-        "articles": [
-            {
-                "title": "U.S. pushes for ceasefire in Gaza as Israel-Hamas talks falter",
-                "url": "https://www.reuters.com/world/middle-east/us-pushes-ceasefire-gaza-2025-03-22/",
-                "source": "reuters",
-                "content": "The United States is intensifying diplomatic efforts to secure a ceasefire in Gaza as negotiations between Israel and Hamas have stalled, according to U.S. officials on March 22, 2025. Secretary of State Marco Rubio met with Israeli and Egyptian counterparts in Cairo to propose a 60-day truce, aiming to halt hostilities that have killed thousands since the conflict escalated last year. The proposal includes provisions for increased humanitarian aid to Gaza and a partial withdrawal of Israeli forces from border areas. Hamas has demanded a full withdrawal, a condition Israel has rejected, citing security concerns. The U.S. initiative comes amid growing international pressure to address the humanitarian crisis in Gaza, where over 1 million people are facing severe food shortages. Analysts remain skeptical about the prospects for a lasting agreement, given the deep mistrust between the parties."
-            },
-            {
-                "title": "Gaza ceasefire talks hit deadlock, U.S. steps in with new proposal",
-                "url": "https://www.apnews.com/article/gaza-ceasefire-talks-us-proposal-2025-03-22",
-                "source": "ap",
-                "content": "Negotiations between Israel and Hamas to end the ongoing conflict in Gaza have reached a deadlock, prompting the United States to propose a new ceasefire plan on March 22, 2025. The U.S. proposal, led by Secretary of State Marco Rubio, calls for a 60-day truce, increased humanitarian aid, and a partial Israeli withdrawal from Gaza\u2019s border regions. The plan aims to address the worsening humanitarian crisis, with over 1 million Gazans facing acute food insecurity. Israel has rejected Hamas\u2019s demand for a full withdrawal, citing the need to maintain security against potential attacks. The talks, mediated by Egypt and Qatar, have been marred by mutual distrust, with both sides accusing the other of violating previous agreements. International aid organizations have welcomed the U.S. initiative but caution that a sustainable solution requires addressing the underlying political issues fueling the conflict."
-            }
-        ],
-        "generated_title": "gaza israel"
     },
     "Cluster_5": {
         "articles": [

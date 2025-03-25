@@ -36,3 +36,35 @@ This report tracks iterations over the dataset to optimize the clustering and fi
 - Adjust the hierarchical clustering distance threshold (e.g., increase to 0.4) to form larger clusters.
 - Fix the evaluation script to handle unclustered articles correctly and compute accurate precision, recall, and F1-score.
 - Run the pipeline again and evaluate the results.
+
+## Iteration 2 - 2025-03-27
+
+**Changes:**
+
+- Increased hierarchical clustering distance threshold to 0.4 to form larger clusters.
+- Fixed evaluation script to compute accurate precision, recall, and F1-score for clustered articles.
+
+**Results:**
+
+- Narratives Formed: 11/13
+- Precision: 0.0000 (still incorrect, needs further debugging)
+- Recall: 0.0000 (still incorrect, needs further debugging)
+- F1-Score: 0.0000 (still incorrect, needs further debugging)
+- Adjusted Rand Index (ARI): 0.3306
+- Normalized Mutual Information (NMI): 0.7835
+
+**Observations:**
+
+- Formed 11 narratives: "Ukraine Putin", "Department Education" (partial), "Trump Tariffs" (mixed with Canada State), "Biden Former", "Government Federal", "Tesla Musk", "Supreme Court" (mixed with Boasberg Judge), "Walz 2024", "Maher Food", "Middle East", "Climate Policy".
+- Missing 2 narratives: "Boasberg Judge" (mixed in Cluster_0 with Supreme Court articles), "Canada State" (one article in Cluster_4, other in single-article cluster).
+- Distance threshold of 0.4 formed larger clusters, recovering "Ukraine Putin" and "Biden Former", but some clusters (e.g., Cluster_0, Cluster_4) are still mixed.
+- 11 articles remain in single-article clusters, preventing some narratives from forming fully.
+- Evaluation script still producing incorrect precision, recall, and F1-score; needs further debugging.
+- Summaries are accurate and focused, but mixed clusters (e.g., Cluster_0, Cluster_4) result in broader summaries.
+
+**Next Steps:**
+
+- Further adjust the hierarchical clustering distance threshold (e.g., try 0.5) to form larger clusters and reduce single-article clusters.
+- Debug the evaluation script to compute correct precision, recall, and F1-score metrics.
+- Consider refining the filtering step to exclude less cohesive clusters (e.g., lower the keyword overlap threshold).
+- Run the pipeline again and evaluate the results.
