@@ -7,6 +7,21 @@ from sklearn.cluster import DBSCAN
 import re
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from nltk.stem import WordNetLemmatizer
+import nltk
+
+# Download NLTK data
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
+nltk.download('punkt_tab')
+
+# Initialize NLP tools
+stop_words = set(stopwords.words('english'))
+lemmatizer = WordNetLemmatizer()
+model = SentenceTransformer('all-MiniLM-L6-v2')
 
 # Function to clean boilerplate text
 def clean_boilerplate(text):
@@ -22,6 +37,31 @@ def clean_boilerplate(text):
         cleaned_text = re.sub(pattern, '', cleaned_text, flags=re.MULTILINE)
     cleaned_text = re.sub(r'\s+', ' ', cleaned_text).strip()
     return cleaned_text
+
+# Function to preprocess text for keyword overlap (not used for merging but kept for compatibility)
+def preprocess_text(text):
+    tokens = word_tokenize(text.lower())
+    tokens = [lemmatizer.lemmatize(token) for token in tokens if token.isalnum() and token not in stop_words]
+    return ' '.join(tokens)
+
+# Function to compute average pairwise similarity between two clusters
+def compute_cluster_similarity(cluster_articles1, cluster_articles2):
+    # Extract texts from articles in both clusters
+    texts1 = [clean_boilerplate(article['content']) + " " + article['title'] for article in cluster_articles1]
+    texts2 = [clean_boilerplate(article['content']) + " " + article['title'] for article in cluster_articles2]
+    
+    # Compute embeddings for all articles
+    all_texts = texts1 + texts2
+    embeddings = model.encode(all_texts)
+    embeddings1 = embeddings[:len(texts1)]
+    embeddings2 = embeddings[len(texts1):]
+    
+    # Compute pairwise similarities between all articles in the two clusters
+    similarities = cosine_similarity(embeddings1, embeddings2)
+    
+    # Return the average similarity
+    avg_similarity = np.mean(similarities)
+    return avg_similarity
 
 # Function to generate a narrative title based on TF-IDF keywords
 def generate_narrative_title(cluster_texts):
@@ -46,7 +86,7 @@ def load_existing_narratives():
         return {}
 
 # Simulated scraper function (replace with actual scraping logic later)
-def scrape_articles(search_terms):
+def scrape_articles():
     raw_narratives = load_existing_narratives()
     if not raw_narratives:
         print("No valid existing data found, initializing with placeholder data.")
@@ -56,16 +96,8 @@ def scrape_articles(search_terms):
 
 # Main function to scrape and group articles into narratives using clustering
 def main():
-    # Example search terms (replace with actual search terms)
-    search_terms = [
-        "Musk Pentagon", "Ukraine Putin", "Department Education", "Boasberg Judge",
-        "Canada State", "Biden Former", "King Files", "Government Federal",
-        "Democrats Town", "Tesla Musk", "Administration Power", "State Rubio",
-        "Walz 2024", "Crisis Been", "First Term", "Maher Food"
-    ]
-
     # Scrape articles
-    raw_narratives = scrape_articles(search_terms)
+    raw_narratives = scrape_articles()
 
     # Collect all articles into a flat list and remove duplicates
     all_articles = []
@@ -84,30 +116,52 @@ def main():
     print(f"Total articles after cleaning: {len(cleaned_texts)}")
 
     # Compute Sentence-BERT embeddings
-    model = SentenceTransformer('all-MiniLM-L6-v2')
     embeddings = model.encode(cleaned_texts, show_progress_bar=True)
 
-    # Apply DBSCAN clustering
+    # Apply DBSCAN clustering on original embeddings
     clustering = DBSCAN(
-        eps=0.3,  # Distance threshold for clustering
+        eps=0.4,  # Set to 0.4 as it achieved 9/13 narratives in Iteration 7
         min_samples=2,  # Minimum articles per cluster
-        metric='cosine'
+        metric='cosine'  # Use cosine distance on original embeddings
     )
     cluster_labels = clustering.fit_predict(embeddings)
 
     # Group articles by cluster
-    clustered_articles = {}
+    initial_clusters = {}
     for idx, label in enumerate(cluster_labels):
         if label == -1:  # DBSCAN labels noise points as -1
-            continue  # Skip unclustered articles
+            continue  # Skip unclustered articles for now
         cluster_id = f"Cluster_{label}"
-        if cluster_id not in clustered_articles:
-            clustered_articles[cluster_id] = []
-        clustered_articles[cluster_id].append(all_articles[idx])
+        if cluster_id not in initial_clusters:
+            initial_clusters[cluster_id] = []
+        initial_clusters[cluster_id].append(all_articles[idx])
 
-    # Form narratives from clusters, ensuring at least 2 articles per narrative
+    # Rule-based merging of clusters based on average pairwise similarity
+    merged_clusters = {}
+    cluster_ids = list(initial_clusters.keys())
+    merged = set()
+    merge_threshold = 0.70  # Increased similarity threshold for merging to prevent over-merging
+
+    for i, cluster_id1 in enumerate(cluster_ids):
+        if cluster_id1 in merged:
+            continue
+        merged_cluster = initial_clusters[cluster_id1].copy()
+        merged_cluster_id = cluster_id1
+
+        for j, cluster_id2 in enumerate(cluster_ids[i+1:], start=i+1):
+            if cluster_id2 in merged:
+                continue
+            avg_similarity = compute_cluster_similarity(initial_clusters[cluster_id1], initial_clusters[cluster_id2])
+            if avg_similarity >= merge_threshold:
+                merged_cluster.extend(initial_clusters[cluster_id2])
+                merged.add(cluster_id2)
+
+        merged.add(cluster_id1)
+        merged_clusters[merged_cluster_id] = merged_cluster
+
+    # Form narratives from merged clusters, ensuring at least 2 articles per narrative
     filtered_narratives = {}
-    for cluster_id, articles in clustered_articles.items():
+    for cluster_id, articles in merged_clusters.items():
         print(f"{cluster_id} size: {len(articles)} articles")
         if len(articles) < 2:
             continue  # Skip clusters with fewer than 2 articles
