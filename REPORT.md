@@ -698,3 +698,128 @@ This report tracks iterations over the dataset to optimize the clustering and fi
 - Adjust the hybrid approach: lower the similarity threshold for merging (e.g., to 0.50) to allow more clusters to merge, potentially recovering narratives like "Trump Tariffs" and "Government Federal".
 - Keep the similarity threshold at 0.65 for filtering to retain cohesive clusters.
 - Run the pipeline again and evaluate the results.
+
+## Iteration 23 - 2025-03-25
+
+**Changes:**
+
+- Successfully fetched 464 articles (442 after deduplication) from NewsAPI using a new API key, replacing the static `raw_narratives.json` dataset.
+- Adjusted the date range to March 1 to March 24, 2025, to comply with NewsAPI’s free tier limits.
+- Used HDBSCAN (min_cluster_size=2, min_samples=2) for unsupervised clustering, with BERTopic for topic discovery.
+- Fixed a bug in `scraper.py` related to the `today` variable causing an `UnboundLocalError`.
+- Evaluated clustering quality using silhouette score, Davies-Bouldin index, and manual inspection.
+
+**Results:**
+
+- Narratives Formed: 4/39
+- Silhouette Score: 0.6199
+- Davies-Bouldin Index: 0.9293
+
+**Observations:**
+
+- Formed 39 clusters from 442 articles, with 149 articles clustered and 293 unclustered (noise). After filtering (similarity ≥ 0.65), only 4 narratives passed: "trump canada", "238 accept", "news android", "role critical".
+- Silhouette score (0.6199) and Davies-Bouldin index (0.9293) meet targets (>0.5 and <1.0), indicating good clustering quality for the 4 narratives.
+- Manual inspection:
+  - "trump canada" (Similarity 0.68): Coherent, focuses on Trump’s tariff policies affecting Canada (keywords: trump, canada, tariff).
+  - "news android" (Similarity 1.00): Coherent but repetitive, a collection of weekly Android news roundups (keywords: android, news, weekly).
+  - "role critical" (Similarity 0.77): Coherent, focuses on streaming’s role in business, but contains noise tokens (e.g., li, ul) (keywords: streaming, business, critical).
+- The 0.65 similarity threshold is too strict for the larger dataset, excluding many clusters (e.g., "tesla musk" with 0.24 similarity). Many clusters have low similarity and keyword overlap, suggesting mixed or diverse content.
+- Some clusters (e.g., "238 accept") are not news narratives but privacy notices, indicating a need for better pre-filtering of non-news content.
+
+**Next Steps:**
+
+- Lower the similarity threshold (e.g., to 0.5) to retain more clusters, aiming for 10-15 narratives.
+- Pre-filter articles to exclude non-news content (e.g., privacy notices like "238 accept").
+- Adjust HDBSCAN parameters (e.g., increase min_samples to reduce noise) to form more cohesive clusters.
+- Run the pipeline again and evaluate the results.
+
+## Iteration 24 - 2025-03-25
+
+**Changes:**
+
+- Added pre-filtering in `scraper.py` to exclude non-news content (e.g., privacy notices) based on keywords, reducing the dataset from 454 to 433 articles.
+- Increased HDBSCAN `min_samples` to 3 to reduce noise and form more cohesive clusters.
+- Lowered the similarity threshold in `filter.py` from 0.65 to 0.5 and added a keyword overlap threshold of 0.1 to ensure thematic coherence.
+
+**Results:**
+
+- Narratives Formed: 2/26
+- Silhouette Score: 0.6709
+- Davies-Bouldin Index: 0.7574
+
+**Observations:**
+
+- Formed 26 clusters from 433 articles, with 108 articles clustered and 325 unclustered (noise). After filtering (similarity ≥ 0.5, keyword overlap ≥ 0.1), only 2 narratives passed: "private moon" and "news android".
+- Silhouette score (0.6709) and Davies-Bouldin index (0.7574) meet targets (>0.5 and <1.0), indicating good clustering quality for the 2 narratives.
+- Manual inspection:
+  - "private moon" (Similarity 0.55): Coherent, focuses on private lunar missions (keywords: lunar, private, company).
+  - "news android" (Similarity 1.00): Coherent but repetitive, a collection of weekly Android news roundups (keywords: android, news, weekly).
+  - "trump tariffs" (Similarity 0.46, excluded): Coherent, focuses on Trump’s tariff policies affecting Canada (keywords: tariffs, canada, trump), but excluded due to the similarity threshold.
+- The similarity threshold of 0.5 and keyword overlap threshold of 0.1 are still too strict, excluding many coherent clusters (e.g., "trump tariffs" with similarity 0.46). Many clusters have low similarity and keyword overlap, suggesting mixed or diverse content.
+- Pre-filtering excluded some valid news articles (e.g., "IBM wins UK lawsuit against LzLabs"), indicating the keyword list needs refinement.
+
+**Next Steps:**
+
+- Lower the similarity threshold to 0.4 and keyword overlap threshold to 0.05 to retain more clusters, aiming for 10-15 narratives.
+- Refine the pre-filtering keyword list to avoid excluding valid news articles (e.g., remove "policy" or add context-aware filtering).
+- Run the pipeline again and evaluate the results.
+
+## Iteration 25 - 2025-03-25
+
+**Changes:**
+
+- Refined pre-filtering in `scraper.py` to use specific phrases (e.g., "privacy policy") instead of broad keywords, retaining more valid news articles.
+- Lowered the similarity threshold in `filter.py` from 0.5 to 0.4 and the keyword overlap threshold from 0.1 to 0.05 to retain more clusters.
+
+**Results:**
+
+- Narratives Formed: 12/24
+- Silhouette Score: 0.3096
+- Davies-Bouldin Index: 1.4862
+
+**Observations:**
+
+- Formed 24 clusters from 442 articles, with 108 articles clustered and 334 unclustered (noise). After filtering (similarity ≥ 0.4, keyword overlap ≥ 0.05), 12 narratives passed: "canada trump", "new installer", "led apple", "private moon", "238 accept", "severance season", "news android", "teases runner", "role critical", "ukrainian m1", "ukrainian li", "yong chung".
+- Silhouette score (0.3096) and Davies-Bouldin index (1.4862) are below targets (>0.5 and <1.0), indicating that the clusters are not highly cohesive or well-separated.
+- Manual inspection:
+  - "canada trump" (Similarity 0.46): Coherent, focuses on Trump’s policies affecting Canada (keywords: trump, canada, tariffs).
+  - "private moon" (Similarity 0.55): Coherent, focuses on private lunar missions (keywords: lunar, private, company).
+  - "ai chars" (Similarity 0.34, excluded): Coherent but broad, focuses on AI developments and challenges (keywords: ai, intelligence, industry), excluded due to low similarity.
+- The lowered thresholds allowed 12 narratives to pass, meeting the target range of 10-15, but the clustering metrics indicate room for improvement in cluster quality.
+- Pre-filtering missed some non-news content (e.g., "238 accept"), indicating a need for further refinement.
+
+**Next Steps:**
+
+- Adjust HDBSCAN `min_samples` to 2 to reduce noise while forming more clusters, potentially improving cohesion.
+- Refine pre-filtering to catch remaining non-news content (e.g., add "transparency" to non-news phrases).
+- Run the pipeline again and evaluate the results.
+
+## Iteration 26 - 2025-03-25
+
+**Changes:**
+
+- Lowered HDBSCAN `min_samples` from 3 to 2 in `scraper.py` to form more clusters while reducing noise.
+- Refined pre-filtering in `scraper.py` by adding "transparency", "framework", and "iab" to the `non_news_phrases` list to better exclude privacy notices.
+
+**Results:**
+
+- Narratives Formed: 17/31
+- Silhouette Score: 0.3158
+- Davies-Bouldin Index: 1.5844
+
+**Observations:**
+
+- Formed 31 clusters from 435 articles (after pre-filtering and deduplication), with 142 articles clustered and 293 unclustered (noise). After filtering (similarity ≥ 0.4, keyword overlap ≥ 0.05), 17 narratives passed: "trump canada", "ai chars", "cujo chars", "air cool", "apple airpods", "led new", "quantum computing", "private moon", "severance season", "lego disney", "news android", "teases plus", "plan premium", "lenovo pro", "role critical", "ukrainian li", "tanker collision".
+- Silhouette score (0.3158) and Davies-Bouldin index (1.5844) are below targets (>0.5 and <1.0), indicating that the clusters are not highly cohesive or well-separated.
+- Manual inspection:
+  - "trump canada" (Similarity 0.68): Coherent, focuses on Trump’s tariff policies affecting Canada (keywords: tariffs, canada, trump).
+  - "private moon" (Similarity 0.55): Coherent, focuses on private lunar missions (keywords: lunar, private, company).
+  - "astronauts nasa" (Similarity 0.31, excluded): Coherent, focuses on NASA astronauts and space missions (keywords: nasa, astronaut, space), but excluded due to low similarity.
+- The lowered thresholds allowed 17 narratives to pass, exceeding the target range of 10-15, but the clustering metrics indicate that cluster quality needs improvement.
+- Pre-filtering improved but still missed some non-news content (e.g., "238 accept" in previous runs), suggesting further refinement is needed.
+
+**Next Steps:**
+
+- Explore alternative clustering methods (e.g., K-Means with a silhouette-based optimal K) to improve cluster cohesion and separation.
+- Refine pre-filtering to catch remaining non-news content (e.g., add context-aware filtering like "transparency framework").
+- Run the pipeline again and evaluate the results.

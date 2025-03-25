@@ -3,152 +3,310 @@
         "Cluster_0": {
             "articles": [
                 {
-                    "title": "How to decode a head-spinning few days of Ukraine war diplomacy",
-                    "url": "https://www.cnn.com/2025/03/19/politics/ukraine-war-trump-putin-zelensky-russia-diplomacy/index.html",
-                    "source": "cnn",
-                    "content": "President Donald Trump's calls with President Vladimir Putin and President Volodymyr Zelensky this week represent the most intense diplomacy aimed at ending the war in Ukraine since Russia's invasion three years ago. Early signs are discouraging, since Putin refused to sign up for Trump's proposal of a 30-day ceasefire. But Trump is framing the opening of any dialogue as a triumph. And each leader is trying to manipulate the diplomacy to their own ends and playing the public relations game - not least to escape blame if everything falls apart. The White House is spinning a fiction of significant progress both to keep alive the chances of a peace process developing and to support the increasingly tenuous conceit that Trump is a great dealmaker, uniquely able to forge peace. Related article In Ukraine and Gaza, Trump finds out that ending wars is tougher than it looks Putin flatly refused Trump's big ask on the ceasefire. Quite simply, he's not ready to end the war yet, as can be seen fr"
+                    "title": "Watch this ultra-detailed animation of the seafloor",
+                    "content": "A NASA and CNES satellite lets scientists see the ocean floor in new ways. \r\nA NASA and CNES satellite lets scientists see the ocean floor in new ways. \r\nThe world has a more detailed map of the seaf\u2026 [+2724 chars]",
+                    "url": "https://www.theverge.com/nasa/634086/ocean-floor-map-satellite-nasa-cnes"
                 },
                 {
-                    "title": "Trump eyes control of Ukraine's nuclear plants as US prepares ceasefire talks with Russia",
-                    "url": "https://www.foxnews.com/world/trump-eyes-control-ukraines-nuclear-plants-us-prepares-ceasefire-talks-russia",
-                    "source": "fox",
-                    "content": "Fox News contributor Dan Hoffman joined 'America's Newsroom' to discuss President Donald Trump's negotiations with Russian President Putin on the Ukraine war and why he believes the U.S. should tread lightly in peace talks. As top U.S. officials prepare for a meeting with a Russian delegation in Saudia Arabia Sunday, questions have mounted over how the Trump administration will push Moscow to extend a preliminary ceasefire. Russian President Vladimir Putin this week agreed to temporarily halt strikes on Ukraine's energy infrastructure, which includes Europe's largest nuclear power plant, the Zaporizhzhia Nuclear Power Station. Secretary of State Marco Rubio and National Security Advisor Mike Waltz, who will both travel to Jeddah for the negotiations, said the next step will be to secure a ceasefire over the Black Sea. MILITARY LEADERS TO MEET ON UK-FRANCE 'COALITION OF THE WILLING' PLAN FOR UKRAINE From left, U.S. National Security Advisor Mike Waltz, U.S. Secretary of State Marco Rubi"
+                    "title": "FCC chair says we\u2019re too dependent on GPS and wants to explore \u2018alternatives\u2019",
+                    "content": "FCC chair Brendan Carr says relying heavily on GPS leaves us exposed.\r\nFCC chair Brendan Carr says relying heavily on GPS leaves us exposed.\r\nThe Federal Communications Commission (FCC) plans to vote\u2026 [+1179 chars]",
+                    "url": "https://www.theverge.com/news/625671/fcc-vote-gps-911-technologies-inquiry"
+                },
+                {
+                    "title": "Writing a GPS Receiver from Scratch",
+                    "content": "GPS is an incredible piece of modern technology. Not only does it allow for locating objects precisely anywhere on the planet, but it also enables the turn-by-turn directions we take for granted thes\u2026 [+1234 chars]",
+                    "url": "https://hackaday.com/2025/03/18/writing-a-gps-receiver-from-scratch/"
+                },
+                {
+                    "title": "Driverless racecar sets a new autonomous speed record",
+                    "content": "A fully driverless Maserati MC20 Coupe reached 197.7 mph at Kennedy Space Center last week.\r\nA fully driverless Maserati MC20 Coupe reached 197.7 mph at Kennedy Space Center last week.\r\nLook out: the\u2026 [+2018 chars]",
+                    "url": "https://www.theverge.com/news/621990/autonomous-speed-record-indy-challenge-maserati"
+                },
+                {
+                    "title": "UK autonomous driving startup Wayve rolls into Germany with new testing hub",
+                    "content": "British autonomous driving startup Wayve is set to establish a testing and development hub in Germany as it prepares to deploy self-driving vehicles in Europes largest automotive market.\u00a0\r\nWayves new\u2026 [+2575 chars]",
+                    "url": "https://thenextweb.com/news/autonomous-vehicles-startup-wayve-bring-embodied-ai-to-germany"
+                },
+                {
+                    "title": "Military vehicles to get mixed reality windshields controlled by human eyes",
+                    "content": "Finnish startup Distance Technologies emerged from stealth last year with a technology it claims can turn any transparent surface into a mixed reality (MR) display. Now, it has teamed up with Patria \u2026 [+3372 chars]",
+                    "url": "https://thenextweb.com/news/military-vehicles-add-distance-mixed-reality-windshields"
+                },
+                {
+                    "title": "iRobot launches eight new Roombas and finally adds lidar mapping",
+                    "content": "iRobot\u2019s new lineup of Roomba robot vacuum and mops now all come with lidar navigation and mapping and a whole new look.\r\n\n\nAfter a tumultuous 2024, in which iRobot lost its founder and CEO, Colin An\u2026 [+7882 chars]",
+                    "url": "https://www.theverge.com/news/627751/irobot-launches-eight-new-roombas-with-lidar-room-mapping"
+                },
+                {
+                    "title": "The Corvette ZR1\u2019s 233-mph run had to start in a virtual world",
+                    "content": "The Corvette ZR1s 233-mph run had to start in a virtual world\r\nIt turns out it takes a little Fortran to make a faster Corvette.\r\nThe Corvette ZR1s 233-mph run had to start in a virtual world\r\nIt tur\u2026 [+11443 chars]",
+                    "url": "https://www.theverge.com/chevrolet/624087/chevy-corvette-zr1-speed-record-simulation"
+                },
+                {
+                    "title": "Check Out Stunning Images of the Scientifically Plausible Alien Planet From Ash",
+                    "content": "If you\u2019re going to set a sci-fi movie on an alien planet, it\u2019s a nice bonus if that planet actually exists. Or, at least, is inspired by one that actually exists. In the new film Ash, director Flying\u2026 [+1890 chars]",
+                    "url": "https://gizmodo.com/ash-movie-planet-elza-gonzalez-aaron-paul-2000572816"
+                },
+                {
+                    "title": "How to get pets for your Hideout in Assassin\u2019s Creed Shadows",
+                    "content": "Good news: You can pet the dog in Assassin\u2019s Creed Shadows. When you pet an animal, you\u2019re rewarded with a really cute cinematic \u2014 apparently, even strange cats are ready to leap into Naoe\u2019s hands fo\u2026 [+2941 chars]",
+                    "url": "https://www.polygon.com/assassins-creed-shadows-guides/543533/pets-cats-dogs-how-to-get"
+                },
+                {
+                    "title": "Portage County inspections: Two restaurants with double-digit violations and 8 ace reports",
+                    "content": "The following are the latest results of Portage County Health Department inspections on licensed food establishments and other types of businesses, which the Stevens Point Journal reports monthly.<li\u2026 [+6358 chars]",
+                    "url": "https://www.stevenspointjournal.com/story/news/local/2025/03/24/portage-county-inspections-two-restaurants-with-double-digit-violations-and-eight-ace-reports/82589818007/"
+                },
+                {
+                    "title": "Brazil Clears 8 Miles of Amazon Rainforest to Make Space for UN Climate Conference",
+                    "content": "This November, the United Nations will descend on the city of Bel\u00e9m, Brazil in an attempt to solve climate change. The 2025 United Nations Climate Change Conference, or COP30, will bring 50,000 peopl\u2026 [+3591 chars]",
+                    "url": "https://gizmodo.com/brazil-clears-8-miles-of-amazon-rainforest-to-make-space-for-un-climate-conference-2000574955"
+                },
+                {
+                    "title": "Behold \u2018Big Wheel\u2019: An Unusually Monstrous Galaxy From the Early Universe",
+                    "content": "Observations by the keen-eyed Webb Space Telescope have revealed a huge galaxy in the distantwhich is to say earlyuniverse.\r\nThe galaxy is a vibrant orange disk, dubbed the Big Wheel. Its life began \u2026 [+2559 chars]",
+                    "url": "https://gizmodo.com/behold-big-wheel-an-unusually-monstrous-galaxy-from-the-early-universe-2000579038"
+                },
+                {
+                    "title": "What nine months in space does to the human body",
+                    "content": "Spending time in space and having an unrivalled view of planet Earth is an experience many of us dream of.\r\nHowever, the human body evolved to function in the gravity of Earth. So time in the weightl\u2026 [+3906 chars]",
+                    "url": "https://www.bbc.com/news/articles/c1jpyl8g772o"
+                },
+                {
+                    "title": "Aider: Using Uv as an Installer",
+                    "content": "Aider: Using uv as an installer. Paul Gauthier has an innovative solution for the challenge of helping end users get a copy of his Aider CLI Python utility installed in an isolated virtual environmen\u2026 [+2008 chars]",
+                    "url": "https://simonwillison.net/2025/Mar/6/aider-using-uv-as-an-installer/"
+                },
+                {
+                    "title": "Billions of Years Ago, Mars Featured Beaches Fit for a Vacation, Astronomers Say",
+                    "content": "Step aside, Santa Monica. It seems that Mars once had beaches that would give the Californian coast a run for its money.\r\nAn international team of researchers has revealed evidence of bygone \u201cvacatio\u2026 [+3266 chars]",
+                    "url": "https://gizmodo.com/billions-of-years-ago-mars-featured-beaches-fit-for-a-vacation-astronomers-say-2000568051"
+                },
+                {
+                    "title": "What Makes a Kid a Strong Reader",
+                    "content": "Why is it that one high school student aces her SAT verbal section while another barely finishes the exam, scoring near the bottom of the heap?\u00a0\u00a0\r\nSome would say that the teenager with the high score\u2026 [+8221 chars]",
+                    "url": "https://time.com/7269188/reading-ability-nature-nurture/"
+                },
+                {
+                    "title": "New Research Suggests Ancient Ocean on Mars",
+                    "content": "Hidden layers of rock below the surface of Mars \"strongly suggest\" the presence of an ancient ocean, according to an international team of scientists including researchers at Penn State.From the univ\u2026 [+2562 chars]",
+                    "url": "https://science.slashdot.org/story/25/03/01/0719208/new-research-suggests-ancient-ocean-on-mars"
+                },
+                {
+                    "title": "Amazon forest felled to build road for climate summit",
+                    "content": "Watch: Drone shots show scale of Amazon deforestation for COP30 road\r\nA new four-lane highway cutting through tens of thousands of acres of protected Amazon rainforest is being built for the COP30 cl\u2026 [+6166 chars]",
+                    "url": "https://www.bbc.com/news/articles/c9vy191rgn1o"
+                },
+                {
+                    "title": "New national forest to see 20m trees planted",
+                    "content": "Malcolm Prior and Jenny KumahBBC News rural affairs team\r\nThe new Western Forest area will include a mix of 20m newly-planted trees and restored woodland\r\nTwenty million trees will be planted and 2,5\u2026 [+3505 chars]",
+                    "url": "https://www.bbc.com/news/articles/c93nxj5n5g9o"
+                },
+                {
+                    "title": "The Dynamic Leaves Tower With Geometric Planters Is Set To Transform Vlore\u2019s Skyline",
+                    "content": "Planned to ascend in Vlore, along Albanias picturesque Riviera, The Leaves by Davide Macullo Architects is designed as an extension of its striking natural environment. This tower embodies an organic\u2026 [+2835 chars]",
+                    "url": "https://www.yankodesign.com/2025/03/16/the-dynamic-leaves-tower-with-geometric-planters-is-set-to-transform-vlores-skyline/"
+                },
+                {
+                    "title": "10 Must-Have Personal Care Products For The Ultimate Urban Gentleman\u2019s Grooming Kit",
+                    "content": "In the fast-paced urban environment, maintaining a polished appearance while balancing a hectic lifestyle is crucial for the modern gentleman. Personal care is not just about looking good; it\u2019s about\u2026 [+12908 chars]",
+                    "url": "https://www.yankodesign.com/2025/03/22/10-must-have-personal-care-products-for-the-ultimate-urban-gentlemans-grooming-kit/"
+                },
+                {
+                    "title": "HomeKit Weekly: Making the case for putting an Aqara temperature and humidity sensor in every room",
+                    "content": "HomeKit has changed how I interact with many of the rooms in my house. While lighting and cameras tend to have the spotlight for most people as they can easily see the impact, environment monitoring \u2026 [+2591 chars]",
+                    "url": "https://9to5mac.com/2025/03/07/the-case-for-putting-an-aqara-temperature-and-humidity-sensor-in-every-room/"
+                },
+                {
+                    "title": "GNSS Signals Tracked on the Moon By LuGRE",
+                    "content": "As part of the payloads on the Firefly Blue Ghost Mission 1 (BGM1) that recently touched down on the Moon, the Lunar GNNS Receiver Experiment (LuGRE) has become the first practical demonstration of a\u2026 [+971 chars]",
+                    "url": "https://hackaday.com/2025/03/07/gnss-signals-tracked-on-the-moon-by-lugre/"
+                },
+                {
+                    "title": "Jupiter's Moon Callisto Probably Has an Ocean Under Its Surface",
+                    "content": "If there was a contest for the most interesting moon in our solar system, Callisto would be a contender. Jupiter's second-largest moon has more impact craters on its surface than any other planetary \u2026 [+5536 chars]",
+                    "url": "https://www.cnet.com/science/jupiters-moon-callisto-probably-has-an-ocean-under-its-surface/"
                 }
             ],
-            "generated_title": "trump ukraine"
+            "generated_title": "new chars"
         },
-        "Cluster_3": {
+        "Cluster_12": {
             "articles": [
                 {
-                    "title": "Fact check: Trump\u2019s false claims on immigration, Biden, Ukraine in DOJ remarks",
-                    "url": "https://www.cnn.com/2025/03/14/politics/fact-check-trump-immigration-biden-ukraine-doj/index.html",
-                    "source": "cnn",
-                    "content": "President Donald Trump made multiple false claims in a Friday speech at the Department of Justice in which he discussed the legal system and crime but also a wide range of other topics, including immigration, the war in Ukraine and former President Joe Biden. Trump also made numerous allegations for which he provided no evidence, alleging unspecified \u201cegregious crimes\u201d in the government during the Biden administration, corruption among unspecified judges, illegality by media outlets that he claimed cover him too negatively and \u201ccrooked\u201d behavior by law firms connected to cases involving Trump. Here is a fact check of some of his assertions. Trump\u2019s prosecutions and Biden: Trump repeated his regular unsubstantiated claim that former President Joe Biden used his office to wield the legal system against Trump. \u201cEtched onto the walls of this building are the words English philosopher John Locke said: \u2018Where law ends, tyranny begins.\u2019 And I see that, and I saw it over the last four years wh"
+                    "title": "Android\u00a016 is getting a major hearing accessibility feature",
+                    "content": "Auracast will give people who use hearing aids a little extra clarity.\r\nAuracast will give people who use hearing aids a little extra clarity.\r\nAndroid phones will soon support Auracast with Bluetoot\u2026 [+1443 chars]",
+                    "url": "https://www.theverge.com/tech/628533/android-16-auracast-hearing-aid-support"
                 },
                 {
-                    "title": "Fact check: Trump exaggerates trade deficits, his 2024 vote total, Ukraine aid, border crossings and fentanyl deaths",
-                    "url": "https://www.cnn.com/2025/03/21/politics/fact-check-trump-oval-office-remarks/index.html",
-                    "source": "cnn",
-                    "content": "President Donald Trump made at least nine false claims in his Friday remarks to reporters in the Oval Office \u2013 including a series of wildly exaggerated statistics on a variety of topics. Trump used inaccurate figures for the number of votes he received in the 2024 presidential election, US aid to Ukraine, the number of migrants who entered the US during the Biden administration, the US trade deficits with China and Canada, and annual US fentanyl deaths. He also wrongly declared, again, that Honda announced it is building a new factory in Indiana. He repeated his years-old baseless claim that NATO would no longer have existed if not for his first presidency. He told his familiar unsubstantiated story about large numbers of migrants having come from jails in \u201cthe Congo\u201d and elsewhere. And he once more discussed Canada\u2019s dairy tariffs without mentioning a critical fact about them. Here is a fact check. While criticizing a federal judge who is presiding over a challenge to one of Trump\u2019s i"
-                }
-            ],
-            "generated_title": "trump biden"
-        },
-        "Cluster_4": {
-            "articles": [
-                {
-                    "title": "Musk\u2019s Tesla faces new lawsuit over self-driving claims",
-                    "url": "https://www.foxnews.com/tech/musks-tesla-faces-new-lawsuit-over-self-driving-claims",
-                    "source": "fox",
-                    "content": "Tesla, led by CEO Elon Musk, is facing a new lawsuit filed in California federal court on Tuesday, alleging the company made misleading claims about its self-driving technology. The suit, brought by a group of Tesla owners, claims the company\u2019s Autopilot and Full Self-Driving (FSD) features do not perform as advertised, citing multiple accidents linked to the systems. \u201cMusk has repeatedly promised full autonomy, but the technology isn\u2019t there yet,\u201d said lead plaintiff John Doe, who claims his Tesla Model 3 failed to stop at a red light while in FSD mode. The lawsuit seeks damages and a court order to stop Tesla from marketing its systems as self-driving. Tesla has faced similar lawsuits in the past, with Musk defending the technology as a critical step toward safer roads. The company has not yet responded to the latest filing."
+                    "title": "Xiaomi Buds 5 Pro are the first to deliver on Qualcomm\u2019s promise of Wi-Fi earbuds",
+                    "content": "They even have better battery life than the Bluetooth model.\r\nThey even have better battery life than the Bluetooth model.\r\nXiaomi has given a European launch to its Buds 5 Pro, the first earbuds to \u2026 [+2156 chars]",
+                    "url": "https://www.theverge.com/news/622452/xiaomi-buds-5-pro-are-the-first-to-deliver-on-qualcomms-promise-of-wi-fi-earbuds"
                 },
                 {
-                    "title": "Tesla sued over misleading self-driving technology claims",
-                    "url": "https://www.cnn.com/2025/03/18/tech/tesla-lawsuit-self-driving-claims/index.html",
-                    "source": "cnn",
-                    "content": "A group of Tesla owners has filed a lawsuit against the company in California federal court on March 18, 2025, accusing CEO Elon Musk and Tesla of misleading consumers about the capabilities of its self-driving technology. The plaintiffs allege that Tesla\u2019s Autopilot and Full Self-Driving (FSD) systems have failed to deliver on Musk\u2019s promises of full autonomy, pointing to several accidents caused by the systems\u2019 errors. \u201cWe were sold a vision of self-driving cars that doesn\u2019t match reality,\u201d said plaintiff Jane Roe, whose Tesla Model Y allegedly veered into oncoming traffic while using FSD. The lawsuit demands compensation for affected owners and an injunction to prevent Tesla from advertising its technology as self-driving. Tesla has faced growing scrutiny over its autonomous driving claims, with regulators also investigating the company\u2019s safety record."
-                }
-            ],
-            "generated_title": "tesla driving"
-        },
-        "Cluster_5": {
-            "articles": [
-                {
-                    "title": "Walz defends 2024 campaign strategy amid Democratic losses",
-                    "url": "https://www.foxnews.com/politics/walz-defends-2024-campaign-strategy-democratic-losses",
-                    "source": "fox",
-                    "content": "Minnesota Governor Tim Walz, the Democratic vice-presidential nominee in 2024, defended his campaign strategy on Tuesday, despite the party\u2019s significant losses in the presidential election. Speaking at a press conference in St. Paul, Walz argued that the campaign\u2019s focus on rural voters and economic populism was the right approach, even though it failed to resonate with enough voters to defeat President Donald Trump. \u201cWe spoke to the heart of America, to workers and families who feel left behind,\u201d Walz said. Critics within the Democratic Party have blamed Walz and presidential nominee Kamala Harris for not addressing key issues like inflation and immigration more effectively. Some party strategists argue that Walz\u2019s folksy style, while appealing in Minnesota, did not translate nationally. The Democratic National Committee is expected to conduct a post-mortem to analyze the 2024 election results."
+                    "title": "Sony\u2019s Dazzling New RGB LED TV Comes in 2026",
+                    "content": "LED TVs are about to get a lot better. As demonstrated by Hisense and to some extent Samsung at CES 2025, a new backlight technology called RGB LED is poised to improve the quality and efficiency of \u2026 [+2714 chars]",
+                    "url": "https://www.wired.com/story/sony-rgb-led-tv/"
                 },
                 {
-                    "title": "Democrats reflect on 2024 loss, Walz\u2019s role under scrutiny",
-                    "url": "https://www.cnn.com/2025/03/15/politics/democrats-2024-loss-walz-scrutiny/index.html",
-                    "source": "cnn",
-                    "content": "Democrats are grappling with their 2024 election loss to President Donald Trump, with Minnesota Governor Tim Walz, the party\u2019s vice-presidential nominee, facing scrutiny for his role in the campaign. In interviews with party leaders and strategists, many pointed to Walz\u2019s inability to connect with swing voters as a key factor in the defeat. \u201cWalz was supposed to bring in the Midwest, but he didn\u2019t deliver,\u201d said a senior Democratic operative, speaking on condition of anonymity. The campaign\u2019s focus on rural economic issues, championed by Walz, failed to counter Trump\u2019s messaging on inflation and border security, which resonated more with voters. Walz has defended his approach, arguing that the party needs to rebuild trust with working-class voters. The Democratic Party is now at a crossroads, with some calling for a return to centrist policies and others advocating for a more progressive agenda."
-                }
-            ],
-            "generated_title": "walz party"
-        },
-        "Cluster_6": {
-            "articles": [
-                {
-                    "title": "Bill Maher says food is the new culture war dividing America",
-                    "url": "https://www.foxnews.com/media/bill-maher-says-food-new-culture-war-dividing-america",
-                    "source": "fox",
-                    "content": "Comedian Bill Maher tackled the growing cultural divide over food on his HBO show 'Real Time' on Friday, arguing that dietary preferences have become the latest battleground in America\u2019s culture wars. Maher pointed to the rise of veganism, plant-based diets, and lab-grown meat as flashpoints, with conservatives often mocking these trends as 'woke' while liberals accuse meat-eaters of contributing to climate change. \u201cFood used to bring us together\u2014now it\u2019s tearing us apart,\u201d Maher said, citing examples like the backlash to plant-based burgers at fast-food chains. He also criticized the politicization of food policy, such as debates over school lunch programs and meat taxes. Maher urged Americans to find common ground, joking that 'we can all agree on pizza.' The segment sparked heated debate on social media, with some praising Maher\u2019s take and others accusing him of trivializing serious issues."
+                    "title": "Sony Ult Wear Noise Cancelling Headphones Are Now at a Steal for $148, Way Cheaper Than AirPods Max",
+                    "content": "The pursuit of perfect audio has led many enthusiasts down an expensive path, but true immersive sound doesn\u2019t always require breaking the bank. Sony\u2019s Ult Wear Over-Ear Noise Cancelling Headphones r\u2026 [+2599 chars]",
+                    "url": "https://gizmodo.com/sony-ult-wear-noise-cancelling-headphones-are-now-at-a-steal-for-148-way-cheaper-than-airpods-max-2000576011"
                 },
                 {
-                    "title": "Bill Maher on \u2018Real Time\u2019: Food has become America\u2019s new culture war",
-                    "url": "https://www.cnn.com/2025/03/16/entertainment/bill-maher-food-culture-war/index.html",
-                    "source": "cnn",
-                    "content": "On the latest episode of HBO\u2019s 'Real Time,' host Bill Maher addressed the increasing polarization over food in America, calling it the new front in the country\u2019s culture wars. During his monologue on March 16, 2025, Maher highlighted how dietary choices\u2014veganism, plant-based diets, and lab-grown meat\u2014have become politically charged. \u201cOn the right, they\u2019re calling it \u2018woke meat,\u2019 and on the left, they\u2019re saying you\u2019re killing the planet if you eat a burger,\u201d Maher said. He pointed to controversies over plant-based options at fast-food restaurants and debates over food policy, like meat taxes and school lunch reforms, as evidence of the divide. Maher called for unity, suggesting that Americans should focus on shared culinary traditions rather than differences. The segment drew mixed reactions, with some viewers appreciating Maher\u2019s perspective and others feeling he oversimplified the issue."
-                }
-            ],
-            "generated_title": "maher food"
-        },
-        "Cluster_7": {
-            "articles": [
-                {
-                    "title": "U.S. pushes for ceasefire in Gaza as Israel-Hamas talks falter",
-                    "url": "https://www.reuters.com/world/middle-east/us-pushes-ceasefire-gaza-2025-03-22/",
-                    "source": "reuters",
-                    "content": "The United States is intensifying diplomatic efforts to secure a ceasefire in Gaza as negotiations between Israel and Hamas have stalled, according to U.S. officials on March 22, 2025. Secretary of State Marco Rubio met with Israeli and Egyptian counterparts in Cairo to propose a 60-day truce, aiming to halt hostilities that have killed thousands since the conflict escalated last year. The proposal includes provisions for increased humanitarian aid to Gaza and a partial withdrawal of Israeli forces from border areas. Hamas has demanded a full withdrawal, a condition Israel has rejected, citing security concerns. The U.S. initiative comes amid growing international pressure to address the humanitarian crisis in Gaza, where over 1 million people are facing severe food shortages. Analysts remain skeptical about the prospects for a lasting agreement, given the deep mistrust between the parties."
+                    "title": "Wire Recording Speaks Again",
+                    "content": "If you think of old recording technology, you probably think of magnetic tape, either in some kind of cassette or, maybe, on reels. But there\u2019s an even older technology that recorded voice on hair-th\u2026 [+1324 chars]",
+                    "url": "https://hackaday.com/2025/03/16/wire-recording-speaks-again/"
                 },
                 {
-                    "title": "Gaza ceasefire talks hit deadlock, U.S. steps in with new proposal",
-                    "url": "https://www.apnews.com/article/gaza-ceasefire-talks-us-proposal-2025-03-22",
-                    "source": "ap",
-                    "content": "Negotiations between Israel and Hamas to end the ongoing conflict in Gaza have reached a deadlock, prompting the United States to propose a new ceasefire plan on March 22, 2025. The U.S. proposal, led by Secretary of State Marco Rubio, calls for a 60-day truce, increased humanitarian aid, and a partial Israeli withdrawal from Gaza\u2019s border regions. The plan aims to address the worsening humanitarian crisis, with over 1 million Gazans facing acute food insecurity. Israel has rejected Hamas\u2019s demand for a full withdrawal, citing the need to maintain security against potential attacks. The talks, mediated by Egypt and Qatar, have been marred by mutual distrust, with both sides accusing the other of violating previous agreements. International aid organizations have welcomed the U.S. initiative but caution that a sustainable solution requires addressing the underlying political issues fueling the conflict."
-                }
-            ],
-            "generated_title": "gaza israel"
-        },
-        "Cluster_8": {
-            "articles": [
-                {
-                    "title": "Trump administration rolls back Biden-era climate regulations",
-                    "url": "https://www.reuters.com/business/environment/trump-rolls-back-climate-regulations-2025-03-19/",
-                    "source": "reuters",
-                    "content": "The Trump administration has begun rolling back several Biden-era climate regulations, announcing on March 19, 2025, the repeal of stricter emissions standards for power plants and vehicles. The move, which aligns with Trump\u2019s campaign promise to prioritize energy independence, has drawn sharp criticism from environmental groups who argue it will exacerbate global warming. The administration claims the regulations were overly burdensome for businesses and hindered economic growth. The Environmental Protection Agency (EPA) will now focus on streamlining permitting for fossil fuel projects, including coal and natural gas plants. Analysts predict the rollback will face legal challenges from states and environmental organizations, potentially delaying implementation. The decision comes as global climate talks approach, raising questions about the U.S. commitment to international climate goals."
+                    "title": "Sony Unveils RGB LED Backlight Tech That Outperforms Traditional Mini LED",
+                    "content": "Sony has developed a new TV display technology combining individual red, green, and blue LEDs for backlighting, potentially offering a middle ground between existing Mini LED and OLED panels. Dubbed \u2026 [+1065 chars]",
+                    "url": "https://entertainment.slashdot.org/story/25/03/19/0743248/sony-unveils-rgb-led-backlight-tech-that-outperforms-traditional-mini-led"
                 },
                 {
-                    "title": "Environmental groups vow to fight Trump\u2019s climate regulation rollbacks",
-                    "url": "https://www.apnews.com/article/trump-climate-regulation-rollbacks-2025-03-20",
-                    "source": "ap",
-                    "content": "Environmental organizations have pledged to challenge the Trump administration\u2019s decision to roll back Biden-era climate regulations, announced on March 19, 2025. The rollbacks target emissions standards for power plants and vehicles, which the administration argues were too restrictive for industry. Environmental groups, including the Sierra Club and Natural Resources Defense Council, warn that the move will accelerate climate change and undermine U.S. leadership in global climate efforts. The EPA under Trump is shifting focus to expedite fossil fuel projects, a move critics say prioritizes short-term economic gains over long-term sustainability. Legal experts expect a wave of lawsuits from states like California and New York, which have vowed to uphold stricter standards. The rollback has reignited debates over the balance between economic growth and environmental protection as the U.S. prepares for upcoming international climate negotiations."
+                    "title": "Shark FlexStyle Styling System Hits a Record Low of $250, the Dyson Airwrap Alternative You Need",
+                    "content": "The Shark FlexStyle represents a revolutionary approach to hair styling, combining the versatility of a multi-styler with the power of a premium hair dryer. This innovative system transforms from a p\u2026 [+2669 chars]",
+                    "url": "https://gizmodo.com/shark-flexstyle-styling-system-hits-a-record-low-of-250-the-dyson-airwrap-alternative-you-need-2000573444"
+                },
+                {
+                    "title": "The Dyson Hot and Cool Purifier Drops to Its Lowest Price, Save $130 on Year-Round Air Treatment",
+                    "content": "Looking for a single solution to your year-round air quality and temperature needs? The Dyson Purifier Hot + Cool Gen 1 stands as one of the most versatile home appliances on the market, combining po\u2026 [+2772 chars]",
+                    "url": "https://gizmodo.com/the-dyson-hot-and-cool-purifier-drops-to-its-lowest-price-save-130-on-year-round-air-treatment-2000575942"
+                },
+                {
+                    "title": "Theater-Like Audio for Just $100, Amazon Fire TV Soundbar Makes It Possible",
+                    "content": "Looking to upgrade your TV\u2019s audio without breaking the bank? Amazon\u2019s Fire TV Soundbar offers a compelling solution for anyone seeking better sound quality than their TV\u2019s built-in speakers can prov\u2026 [+2529 chars]",
+                    "url": "https://gizmodo.com/theater-like-audio-for-just-100-amazon-fire-tv-soundbar-makes-it-possible-2000572335"
+                },
+                {
+                    "title": "Apple Watch Series 10 Just Hit Its Lowest Price Since Launch, $100 Off on Amazon for a Limited Time",
+                    "content": "The Apple Watch Series 10 represents the pinnacle of wearable technology, combining advanced health monitoring, fitness tracking, and smart features in a sleeker, more refined design. With a larger d\u2026 [+2647 chars]",
+                    "url": "https://gizmodo.com/apple-watch-series-10-just-hit-its-lowest-price-since-launch-100-off-on-amazon-for-a-limited-time-2000573441"
+                },
+                {
+                    "title": "Sony will give the PS5 Pro crisper graphics \u2014 by backporting FSR 4",
+                    "content": "Sony says its working on a reimplementation of AMDs FSR 4 upscaler that will make PS5 Pro games look crisper.\r\nSony says its working on a reimplementation of AMDs FSR 4 upscaler that will make PS5 Pr\u2026 [+2326 chars]",
+                    "url": "https://www.theverge.com/news/626952/sony-fsr-4-upscaler-coming-to-ps5-pro-reimplementation"
+                },
+                {
+                    "title": "A Year of the Cheapest Airfare Imaginable Is Yours for Just $10 With a Dollar Flight Club Subscription",
+                    "content": "If someone offered you thousands of dollars of savings on domestic and international airfare in exchange for just $10, would you go for it? That\u2019s not a hypothetical question, by the way StackSocial \u2026 [+2777 chars]",
+                    "url": "https://gizmodo.com/a-year-of-the-cheapest-airfare-imaginable-is-yours-for-just-10-with-a-dollar-flight-club-subscription-2000572879"
+                },
+                {
+                    "title": "Forget the iPad Pro, Amazon Slashes Prices on Microsoft\u2019s Surface Pro for the Big Spring Sale",
+                    "content": "If youre still working off of a piece of ten year old tech, it may be time to start looking for a replacement. The Microsoft Surface Pro laptop is a super versatile option that can fulfill a lot of t\u2026 [+2175 chars]",
+                    "url": "https://gizmodo.com/forget-the-ipad-pro-amazon-slashes-prices-on-microsofts-surface-pro-for-the-big-spring-sale-2000579773"
+                },
+                {
+                    "title": "This 2024 Samsung 75-Inch QLED Smart TV Is Over $1,000 Off, Never Seen It This Cheap Before",
+                    "content": "If youve been eyeing an upgrade for your TV or are looking to treat a loved one to something new this year, look no further than the Samsung QLED 4K television. The 75 Q80D model is going for about 5\u2026 [+2117 chars]",
+                    "url": "https://gizmodo.com/this-2024-samsung-75-inch-qled-smart-tv-is-over-1000-off-never-seen-it-this-cheap-before-2000575723"
+                },
+                {
+                    "title": "Beats Studio Buds Now Just $99, the Best Apple Alternative to AirPods on a Budget",
+                    "content": "Amazon has quite a deal today. We\u2019re far away from any big savings holiday like Black Friday or Amazon\u2019s own Prime Days, and yet the e-commerce giant has some great discounts on a variety of popular \u2026 [+2050 chars]",
+                    "url": "https://gizmodo.com/beats-studio-buds-now-just-99-the-best-apple-alternative-to-airpods-on-a-budget-2000576307"
+                },
+                {
+                    "title": "Apple is \u2018actively developing\u2019 AirPods with cameras: What to expect",
+                    "content": "According to Bloomberg\u2019s Mark Gurman, Apple is \u2018actively developing\u2019 a version of AirPods with integrated cameras. This tech is unlikely to make an appearance in AirPods Pro 3, which are expected to \u2026 [+2635 chars]",
+                    "url": "https://9to5mac.com/2025/03/09/airpods-with-cameras-what-to-expect/"
+                },
+                {
+                    "title": "Why do some birds mimic the sounds of other species?",
+                    "content": "Although some birds learn their species\u2019 song during their first year of life, others, including mockingbirds, continue adding to their repertoire as they grow older. Northern Mockingbirds can learn \u2026 [+2767 chars]",
+                    "url": "https://www.allaboutbirds.org/news/why-do-some-birds-mimic-the-sounds-of-other-species/"
+                },
+                {
+                    "title": "What 2 Wellness Editors Learned From Taking the Apple Hearing Test With Our AirPods",
+                    "content": "According to the CDC, 48 million people in the US have trouble hearing with one or both of their ears. This doesn't just affect older adults -- the CDC also reports that five in 10 young people liste\u2026 [+7326 chars]",
+                    "url": "https://www.cnet.com/health/personal-care/what-wellness-editors-learned-taking-apple-hearing-test-with-airpods/"
+                },
+                {
+                    "title": "Samsung Android XR Headset Could Cost as Much as the Apple Vision Pro",
+                    "content": "Samsungs upcoming Android XR project is turning heads, not just because it has a variety of Vision Pro-like features, but because it may have even better displays than Apples $3,500 headset. Thats no\u2026 [+4541 chars]",
+                    "url": "https://gizmodo.com/samsung-android-xr-headset-could-cost-as-much-as-the-apple-vision-pro-2000573128"
                 }
             ],
-            "generated_title": "climate environmental"
+            "generated_title": "pro tv"
         }
     },
     "excludedNarratives": {
-        "Cluster_1": {
-            "reason": "Articles do not share the same general subject (Similarity: 0.54).",
+        "Cluster_10": {
+            "reason": "Articles do not share the same general subject (Similarity: 0.15).",
             "common_tokens": [
-                "education",
-                "congress",
-                "abolish",
-                "house",
-                "trump",
-                "donald",
-                "executive",
-                "order",
-                "agency",
-                "department"
+                "char"
+            ]
+        },
+        "Cluster_1": {
+            "reason": "Articles do not share the same general subject (Similarity: 0.09).",
+            "common_tokens": [
+                "char"
+            ]
+        },
+        "Cluster_4": {
+            "reason": "Articles do not share the same general subject (Similarity: 0.19).",
+            "common_tokens": [
+                "char"
+            ]
+        },
+        "Cluster_6": {
+            "reason": "Articles do not share the same general subject (Similarity: 0.19).",
+            "common_tokens": [
+                "char"
+            ]
+        },
+        "Cluster_9": {
+            "reason": "Articles do not share the same general subject (Similarity: 0.08).",
+            "common_tokens": [
+                "char"
             ]
         },
         "Cluster_2": {
-            "reason": "Articles do not share the same general subject (Similarity: 0.63).",
+            "reason": "Articles do not share the same general subject (Similarity: 0.31).",
             "common_tokens": [
-                "tariff",
-                "trump",
-                "25",
-                "donald",
-                "good",
-                "new",
-                "trade",
-                "president",
-                "billion",
-                "business"
+                "since",
+                "char",
+                "astronaut",
+                "last",
+                "nasa",
+                "space"
+            ]
+        },
+        "Cluster_8": {
+            "reason": "Articles do not share the same general subject (Similarity: 0.24).",
+            "common_tokens": [
+                "char"
+            ]
+        },
+        "Cluster_11": {
+            "reason": "Articles do not share the same general subject (Similarity: 0.32).",
+            "common_tokens": [
+                "char"
+            ]
+        },
+        "Cluster_13": {
+            "reason": "Articles do not share the same general subject (Similarity: 0.36).",
+            "common_tokens": [
+                "char"
+            ]
+        },
+        "Cluster_7": {
+            "reason": "Articles do not share the same general subject (Similarity: 0.27).",
+            "common_tokens": [
+                "char"
+            ]
+        },
+        "Cluster_3": {
+            "reason": "Articles do not share the same general subject (Similarity: 0.10).",
+            "common_tokens": [
+                "char"
+            ]
+        },
+        "Cluster_5": {
+            "reason": "Articles do not share the same general subject (Similarity: 0.19).",
+            "common_tokens": [
+                "char"
             ]
         }
     }
